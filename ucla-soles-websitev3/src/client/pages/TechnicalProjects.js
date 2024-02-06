@@ -20,12 +20,12 @@ function TechnicalProjects() {
                 </div>
             </div>
 
-            {/*SOLES Web Developer*/}
-            <h2>SOLES Web Developer</h2>
-            <div className="soles_web_web_developer_subsection">
+            {/*SOLES Web Dev*/}
+            <h2>SOLES Web Dev</h2>
+            <div className="soles_web_dev_subsection">
                 <div className="image-block"></div>
                 <div className="content">
-                    <h3>SOLES Web Developer</h3>
+                    <h3>SOLES Web Dev</h3>
                     <p>SOLES Web Dev is Cool</p>
                 </div>
             </div>

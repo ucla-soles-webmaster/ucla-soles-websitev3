@@ -1,0 +1,15 @@
+
+.WhoWeAre{
+    color: rgb(30, 96, 124); 
+  }
+
+
+.PresidentHeader {
+color: rgb(30, 96, 124); 
+text-shadow: 8px 4px 4px rgba(0, 0, 0, 0.5);
+display: flex; 
+}
+
+.PresidentMessage{
+display: flex; 
+}

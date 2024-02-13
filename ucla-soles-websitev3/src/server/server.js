@@ -1,86 +1,40 @@
+const express = require('express')
+const mongoose = require('mongoose')
+const morgan = require('morgan')
+const bodyParser = require('body-parser')
 
+const userRoute = require('./routes/userRoute')
 
+mongoose.connect('mongodb+srv://ucla-soles:ucla-soles@uclawebmaster.icdi46x.mongodb.net/?retryWrites=true&w=majority')
+const db = mongoose.connection
 
-const express = require('express');
+db.on('error', (err) =>{
+    console.log(err)
+})
 
+db.once('open',() =>{
+    console.log('Database Connection :)')
+})
 
+const app = express()
 
-const mongoose = require('mongoose');
+app.use(morgan('dev'))
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
 
- 
-// Create a new Express.js instance
-
-const app = express();
-
- 
-
-// Set up middleware
-
-app.use(express.json());
-
- 
-
-// Connect to the MongoDB database
-
-mongoose.connect('mongodb://localhost/myapp', {
-
-  useNewUrlParser: true,
-
-  useUnifiedTopology: true,
-
-});
-
- 
-
-// Define a schema for our data
-
-const itemSchema = new mongoose.Schema({
-
-  name: String,
-
-  description: String,
-
-});
-
- 
-
-// Define a model based on the schema
-
-const Item = mongoose.model('Item', itemSchema);
-
- 
-
-// Define routes
-
-app.get('/items', async (req, res) => {
-
-  const items = await Item.find();
-
-  res.json(items);
-
-});
-
- 
-
-app.post('/items', async (req, res) => {
-
-  const item = new Item(req.body);
-
-  await item.save();
-
-  res.json(item);
-
-});
-
- 
-
-// Start the server
-
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000
 
 app.listen(PORT, () => {
+    console.log("server running :)")
+})
 
-  console.log(`Server listening on port ${PORT}`);
+app.use('/api/user', userRoute)
 
-});
- 
+// username
+// name
+// email
+// password
+// Admin
+
+
+//test bank

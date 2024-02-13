@@ -5,30 +5,34 @@ const bodyParser = require('body-parser')
 
 const userRoute = require('./routes/userRoute')
 
-mongoose.connect('mongodb+srv://ucla-soles:ucla-soles@uclawebmaster.icdi46x.mongodb.net/?retryWrites=true&w=majority')
-const db = mongoose.connection
 
-db.on('error', (err) =>{
-    console.log(err)
-})
+const uri = 'mongodb+srv://ucla-soles:ucla-soles@uclawebmaster.icdi46x.mongodb.net/?retryWrites=true&w=majority';
+const clientOptions = { serverApi: { version: '1', strict: true, deprecationErrors: true } };
 
-db.once('open',() =>{
-    console.log('Database Connection :)')
-})
+async function run() {
+    try {
+        await mongoose.connect(uri, clientOptions);
+        await mongoose.connection.db.admin().command({ ping: 1 });
+        console.log("Pinged your deployment. You successfully connected to MongoDB!");
 
-const app = express()
+        const User = require('./models/user'); // Adjust the path accordingly
 
-app.use(morgan('dev'))
-app.use(bodyParser.urlencoded({extended: true}))
-app.use(bodyParser.json())
+        const testUser = new User({
+            studentname: 'Test Student',
+            username: 'testuser',
+            email: 'test@example.com',
+            password: 'testpassword',
+        });
 
-const PORT = process.env.PORT || 3000
+        await testUser.save();
+        console.log("Test user added to the database!");
 
-app.listen(PORT, () => {
-    console.log("server running :)")
-})
+    } finally {
+        await mongoose.disconnect();
+    }
+}
 
-app.use('/api/user', userRoute)
+run().catch(console.dir);
 
 // username
 // name

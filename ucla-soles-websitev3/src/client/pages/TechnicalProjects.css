@@ -1,0 +1,24 @@
+.techprojects_container {
+  padding: 20px; /* Add padding to move away from the borders */
+}
+
+.column-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px; /* Adjust spacing between columns */
+}
+
+.image-container {
+  padding: 20 px;
+  margin-right: 20px; /* Adjust spacing between image and text */
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.text-container {
+  text-align: left; /* Align text to the left */
+}
+
+.image-container img {
+  width: 100%; /* Adjust image width */
+  max-width: 400px; /* Adjust maximum image width */
+}

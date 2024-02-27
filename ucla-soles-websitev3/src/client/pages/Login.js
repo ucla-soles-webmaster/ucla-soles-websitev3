@@ -6,7 +6,7 @@ function Login() {
 
     function handleCallbackResponse(response) {
 
-        console.log("Encoded JWT ID token: " + response.credetial);
+        console.log("Encoded JWT ID token: " + response.credential);
         var userObject = jwtDecode(response.credential);
         console.log(userObject)
         setUser(userObject);
@@ -45,6 +45,7 @@ function Login() {
                     <div>
                         <img src={user.picture}alt=""></img>
                         <h3>{user.name}</h3>
+                        <h4>{"solesito"}</h4>
                     </div>
                 }
                 </div>

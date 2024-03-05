@@ -1,6 +1,7 @@
 {
   "name": "ucla-soles-websitev3",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "dependencies": {
     "@react-oauth/google": "^0.12.1",

@@ -1,9 +1,10 @@
-const express = require('express')
-const router = express.Router()
+// import express from "express";
+// import UserSchema from '../models/user.js';
+// const router = express.Router()
 
-const UserController = require('../controllers/usercontroller')
+// const UserController = require('../controllers/usercontroller')
 
-router.get('/', UserController.index)
-router.post('/store-user', UserController.store)
+// router.get('/', UserController.index)
+// router.post('/store-user', UserController.store)
 
-module.exports = router
+// module.exports = router

@@ -1,8 +1,8 @@
 import React from "react";
 import solesAI1 from "../photos/soles_ai1.jpg";
 import solesRacing1 from "../photos/soles_racing1.JPG";
-import solesRacing2 from "../photos/soles_racing2.JPG";
-//import solesWebDev1 from "../photos/soles_webdev1.JPG";
+//import solesRacing2 from "../photos/soles_racing2.JPG";
+import solesWebDev1 from "../photos/soles_webdev1.jpg";
 import './TechnicalProjects.css';
 
 
@@ -12,6 +12,7 @@ export default function TechnicalProjects() {
     <div className="techprojects_container">
         <h1 className="techprojects_heading">Technical Projects</h1>
         </div>
+  
   <div className="column_container">
     <div className="image_container">
       <img src={solesAI1} alt="SOLES AI 1" className="solesAI1" />
@@ -28,17 +29,17 @@ export default function TechnicalProjects() {
     </div>
     <div className="text_container">
       <h3>SOLES Racing</h3>
-      <p>SOLES Racing pioneers the development of 3D-printed RC cars and explores hydrogen fuel cells for sustainable power, partnering with Bruin Racing-Super Mileage Vehicle for research and innovation. With a focus on cutting-edge technology and sustainability, SOLES Racing drives progress in the automotive industry while inspiring future engineers.</p>
+      <p>SOLES Racing studies the development of 3D-printed RC cars and explores hydrogen fuel cells for sustainable power, partnering with Bruin Racing-Super Mileage Vehicle for research and innovation. With a focus on cutting-edge technology and sustainability, SOLES Racing drives progress in the automotive industry while inspiring future engineers.</p>
     </div>
   </div>
 
   <div className="column_container">
     <div className="image_container">
-      <img src={solesRacing2} alt="SOLES Racing 2" className="solesRacing2" />
+      <img src={solesWebDev1} alt="SOLES Web Dev" className="solesWebDev" />
     </div>
     <div className="text_container">
       <h3>SOLES Web Developer</h3>
-      <p>SOLES Web Developer is an organization focused on teaching students JavaScript and CSS for website creation and management. Students have the opportunity to work on the official SOLES website, gaining practical experience and learning essential web development skills. By participating, students develop problem-solving abilities, collaboration skills, and a strong foundation in web development, whether for career advancement or personal growth.</p>
+      <p>SOLES Web Developer is an organization focused on teaching students JavaScript and CSS for website creation and management. Students have the opportunity to work on the official SOLES website, gaining practical experience and learning essential web development skills. By participating, students develop problem-solving abilities, collaboration skills, and a strong foundation in web development.</p>
     </div>
   </div>
 </div>

@@ -2,23 +2,23 @@
   padding: 20px; /* Add padding to move away from the borders */
 }
 
-.column-container {
+/* Styles for column container */
+.column_container {
   display: flex;
-  align-items: center;
-  margin-bottom: 40px; /* Adjust spacing between columns */
 }
 
-.image-container {
-  padding: 20 px;
-  margin-right: 20px; /* Adjust spacing between image and text */
-  flex-shrink: 0; /* Prevent image from shrinking */
+/* Styles for image container */
+.image_container {
+  flex: 1; /* Make image container occupy one third of the desktop */
 }
 
-.text-container {
-  text-align: left; /* Align text to the left */
+/* Styles for text container */
+.text_container {
+  flex: 2; /* Make text container occupy two thirds of the desktop */
 }
 
-.image-container img {
-  width: 100%; /* Adjust image width */
-  max-width: 400px; /* Adjust maximum image width */
+/* Additional styles for image */
+.image_container img {
+  width: 100%; /* Ensure image fills the container */
+  height: auto; /* Maintain aspect ratio */
 }

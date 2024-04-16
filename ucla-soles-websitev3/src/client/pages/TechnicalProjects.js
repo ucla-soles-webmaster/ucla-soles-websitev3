@@ -2,14 +2,14 @@ import React from "react";
 import solesAI1 from "../photos/soles_ai1.jpg";
 import solesRacing1 from "../photos/soles_racing1.JPG";
 import solesWebDev1 from "../photos/soles_webdev1.jpg";
-import solesWebDev2 from "../photos/soles_webdev2.jpg";
-import solesWebDev3 from "../photos/soles_webdev3.jpg";
-import solesWebDev4 from "../photos/soles.webdev4.jpg";
+//import solesWebDev2 from "../photos/soles_webdev2.jpg";
+//import solesWebDev3 from "../photos/soles_webdev3.jpg";
+//import solesWebDev4 from "../photos/soles_webdev4.jpg";
 import './TechnicalProjects.css';
 
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+//import Slider from "react-slick";
+//import "slick-carousel/slick/slick.css";
+//import "slick-carousel/slick/slick-theme.css";
 
 // Custom Arrow Components
 function SampleNextArrow(props) {

@@ -7,6 +7,46 @@ import solesWebDev3 from "../photos/soles_webdev3.jpg";
 import solesWebDev4 from "../photos/soles.webdev4.jpg";
 import './TechnicalProjects.css';
 
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+// Custom Arrow Components
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+      <div
+          className={className}
+          style={{ ...style, display: "block", background: "red", borderRadius: "50%" }}
+          onClick={onClick}
+      />
+  );
+}
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+      <div
+          className={className}
+          style={{ ...style, display: "block", background: "green", borderRadius: "50%" }}
+          onClick={onClick}
+      />
+  );
+}
+
+// Slider settings
+const sliderSettings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  arrows: true,
+  nextArrow: <SampleNextArrow />,
+  prevArrow: <SamplePrevArrow />
+};
 
 export default function TechnicalProjects() {
     return (

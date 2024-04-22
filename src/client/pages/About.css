@@ -1,0 +1,53 @@
+.timeline {
+    text-align: left;
+}
+
+.mission-and-vision{
+    font-size: 1vw;
+}
+
+.timeline-container {
+    overflow-x: auto;
+    padding: 20px;
+  }
+  
+  .timeline {
+    display: flex;
+    flex-direction: column; /* Default layout for mobile */
+    position: relative;
+  }
+  
+  .timeline-event {
+    display: flex;
+    flex-direction: column; /* Adjusts based on orientation */
+    margin: 20px 0;
+  }
+  
+  .event-year {
+    font-weight: bold;
+  }
+  
+  .event-content h3 {
+    margin-top: 5px;
+  }
+  
+  @media (min-width: 768px) { /* Adjust this breakpoint as needed */
+    .timeline {
+      flex-direction: row;
+    }
+  
+    .timeline-event {
+      flex-direction: row;
+      align-items: center; /* Align items center in horizontal mode */
+      margin: 0 40px; /* Space out events horizontally */
+    }
+  
+    .event-year {
+      margin-right: 15px;
+    }
+  
+    .event-content {
+      max-width: 200px; /* Prevents content from stretching too wide */
+    }
+}
+  

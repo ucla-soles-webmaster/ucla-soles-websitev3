@@ -6,6 +6,7 @@ import Contact from './pages/Contact.js';
 import Login from './pages/Login.js';
 import About from './pages/About.js';
 import TechnicalProjects from './pages/TechnicalProjects.js';
+import Footer from './Footer.js';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/techpage" element={<TechnicalProjects />}/>
         </Routes>
       </div>
+      <Footer />
     </div>
     
   );

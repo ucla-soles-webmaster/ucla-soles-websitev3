@@ -1,6 +1,8 @@
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import { Chrono } from "react-chrono";
-import { Timeline } from "flowbite-react";
+// import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
+// import { Chrono } from "react-chrono";
+// import { Timeline } from "flowbite-react";
+import React, { useState } from "react";
+import { Timeline } from "react-beautiful-horizontal-timeline";
 import { HiArrowNarrowRight, HiCalendar } from "react-icons/hi";
 
 import './About.css';
@@ -11,24 +13,31 @@ export default function About() {
         {
           year: 1974,
           title: "SHPE Founded",
-          description: "The Society of Hispanic Professional Engineers was founded in the Los Angeles area. Their objective is to form a national organization of professional Engineers to serve as role models in the Hispanic community."
+          description: "The Society of Hispanic Professional Engineers was founded in Los Angeles in 1974. They aim to form a national organization of professional Engineers to serve as role models in the Hispanic community."
         },
         {
           year: 1978,
           title: "SOLES Founded",
-          description: "The Society of Latinx Engineers and Scientists was established as a chapter of SHPE at UCLA with the intent of increasing Hispanic representation amongst STEM majors at the university."
+          description: "The Society of Latino Engineers was established in 1978 as a chapter of SHPE at UCLA in hopes of increasing Latinx representation in  STEM majors at the university."
         },
         {
           year: 1983,
           title: "CEED Founded",
-          description: "The Center for Excellence in Engineering and Diversity was established at UCLA to bolster the representation of underrepresented minorities in engineering at UCLA."
+          description: "In 1983 The Center for Excellence in Engineering and Diversity was established at UCLA to bolster the representation of underrepresented minorities in engineering at UCLA."
         },
         {
           year: 1992,
           title: "UCLA Tri-Org Founded",
-          description: "Comprising of the Society of Latinx Engineers and Scientists, the National Society of Black Engineers and the American Indian Science and Engineering Society, the UCLA Tri-Org was formed to increase the representation of minority peoples in STEM fields."
+          description: "Comprising of the Society of Latino Engineers, the National Society of Black Engineers, and the American Indian Science and Engineering Society, the UCLA Tri-Org was formed in 1992 to increase the BIPOC in STEM."
         }
     ];
+    const [labelWidth, setlabelWidth] = useState(140);
+    const [amountMove, setamountMove] = useState(350);
+    const [lineColor, setlineColor] = useState("#61dafb");
+    const [darkMode, setdarkMode] = useState(false);
+    const [eventTextAlignCenter, seteventTextAlignCenter] = useState(true);
+    const [showSlider, setshowSlider] = useState(true);
+    const [arrowsSize, setarrowsSize] = useState(false);
       
     return (
         <div className='about'>
@@ -42,6 +51,21 @@ export default function About() {
                 VISION
                 SOLE's vision is a world where Hispanics are highly valued and influential as the leading innovators, scientists, mathematicians and engineers.
             </div>
+            <div className="history">
+                <h1>HISTORY</h1>
+                <Timeline
+                    myList={historyData}
+                    labelWidth={labelWidth}
+                    amountMove={amountMove}
+                    onClick={() => console.log("click")}
+                    lineColor={lineColor}
+                    darkMode={darkMode}
+                    eventTextAlignCenter={eventTextAlignCenter}
+                    // showSlider={showSlider}
+                    arrowsSize={arrowsSize}
+                />                
+            </div>
+
             {/* <div className='timeline'>
                 <VerticalTimeline layout='1-column-left' lineColor='#001d3a'>
                 <VerticalTimelineElement
@@ -92,7 +116,7 @@ export default function About() {
                 </VerticalTimelineElement>
                 </VerticalTimeline>
             </div> */}
-            <div className="timeline-container">
+            {/* <div className="timeline-container">
                 <div className="timeline">
                     {historyData.sort((a, b) => a.year - b.year).map((event, index) => (
                     <div key={index} className="timeline-event">
@@ -104,8 +128,9 @@ export default function About() {
                     </div>
                     ))}
                 </div>
-            </div>
-            <Timeline horizontal>
+            </div> */}
+            
+            {/* <Timeline horizontal>
                 <Timeline.Item>
                     <Timeline.Point icon={HiCalendar} />
                     <Timeline.Content>
@@ -115,10 +140,6 @@ export default function About() {
                         Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order
                         E-commerce & Marketing pages.
                     </Timeline.Body>
-                    {/* <Button color="gray">
-                        Learn More
-                        <HiArrowNarrowRight className="ml-2 h-3 w-3" />
-                    </Button> */}
                     </Timeline.Content>
                 </Timeline.Item>
                 <Timeline.Item>
@@ -142,7 +163,8 @@ export default function About() {
                     </Timeline.Body>
                     </Timeline.Content>
                 </Timeline.Item>
-            </Timeline>            
+            </Timeline>         */}
+
             <div className='awards'>
                 AWARDS
 

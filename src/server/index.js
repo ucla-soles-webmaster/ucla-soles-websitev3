@@ -4,6 +4,7 @@ import cors from "cors";
 
 import { PORT, mongodbURL } from "./config.js";
 import userRouter from "./controllers/usercontroller.js";
+import merchRouter from "./controllers/mechcontroller.js";
 
 const app = express();
 
@@ -21,6 +22,7 @@ mongoose.connect(mongodbURL)
 app.use(cors());
 app.use(express.json());
 app.use('/register', userRouter);
+app.use('/merch', merchRouter);
 
 app.listen(PORT, () => {
     console.log(`App listening to port: ${PORT}`)

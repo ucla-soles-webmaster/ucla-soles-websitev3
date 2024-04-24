@@ -28,7 +28,7 @@ import MerchSchema from '../models/merch.js';
 const merchRouter = express.Router();
 
 // List all merchandise items
-merchRouter.get('/', async (req, res) => {
+merchRouter.get('/getItems', async (req, res) => {
     try {
         const items = await MerchSchema.find();
         res.status(200).json(items);
@@ -38,7 +38,7 @@ merchRouter.get('/', async (req, res) => {
 });
 
 // Add a new merchandise item
-merchRouter.post('/', async (req, res) => {
+merchRouter.post('/addItem', async (req, res) => {
     try {
         const { name, cost, count, imageUrl, stockStatus, urlExt } = req.body;
         const newItem = new MerchSchema({

@@ -7,6 +7,7 @@ import { HiArrowNarrowRight, HiCalendar } from "react-icons/hi";
 
 import './About.css';
 import 'react-vertical-timeline-component/style.min.css';
+import kellyAwardPic from "../photos/kelly-award-pic.png";
 
 export default function About() {
     const historyData = [
@@ -64,6 +65,29 @@ export default function About() {
                     // showSlider={showSlider}
                     arrowsSize={arrowsSize}
                 />                
+            </div>
+
+            <div className="awards">
+                <h1>AWARDS</h1>
+                <div className="awards">
+                <div className="awards-container">
+                    <div className="awards-picture">
+                        <img src={kellyAwardPic} alt="Award Picture"></img>
+                        <p>Former President Kelly Espino holding award Top 5 Greatest Engineer Groups of UCLA</p>
+                    </div>
+                    <div className="awards-text">
+                        <div className="awards-sub-text">
+                        Blue Chip Chapter Award2022 • 2021 • 2020 • 2017 • 2016 • 2015
+                        Awarded during the annual SHPE Regional Leadership Development Conference to chapters shown to provide outstanding metrics throughout the year, exhibiting growth and success.
+
+                        2020 Runner Up for Bruin Development Award
+                        Recognized by UCLA's Engineering Society for our commitment to developing our members.
+
+                        Best Medium Engineering Student Organization at UCLA 2017
+                        </div>
+                    </div>
+                </div>
+                </div>
             </div>
 
             {/* <div className='timeline'>
@@ -165,7 +189,7 @@ export default function About() {
                 </Timeline.Item>
             </Timeline>         */}
 
-            <div className='awards'>
+            {/* <div className='awards'>
                 AWARDS
 
                 Blue Chip Chapter Award2022 • 2021 • 2020 • 2017 • 2016 • 2015
@@ -175,7 +199,7 @@ export default function About() {
                 Recognized by UCLA's Engineering Society for our commitment to developing our members.
 
                 Best Medium Engineering Student Organization at UCLA 2017
-            </div>
+            </div> */}
         </div>
     )
 }

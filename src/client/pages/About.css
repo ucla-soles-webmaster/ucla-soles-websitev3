@@ -24,13 +24,13 @@ h1{
   
   .timeline {
     display: flex;
-    flex-direction: column; /* Default layout for mobile */
+    flex-direction: column;
     position: relative;
   }
   
   .timeline-event {
     display: flex;
-    flex-direction: column; /* Adjusts based on orientation */
+    flex-direction: column;
     margin: 20px 0;
   }
   
@@ -41,6 +41,49 @@ h1{
   .event-content h3 {
     margin-top: 5px;
   }
+
+.awards-text{
+  flex: 0.7;
+}
+
+.awards-container{
+  display: flex;
+  flex-direction: row;  
+  background-color: #FFF7AB;
+  height: 40vh;
+  position: relative;
+}
+
+.awards-sub-text{
+  background-color: white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-weight: bold;
+}
+
+.awards{
+  margin-bottom: 150px;
+}
+
+
+.awards-picture{
+  flex: 0.3;
+  /* margin-left: 30px;
+  margin-top: -20px; */
+}
+
+.awards-picture img{
+  padding-left: 25px;
+  padding-right: 25px;
+  /* width: 39vw;
+  padding: -70px 0; */
+  /* width: 100%; */
+  /* margin: auto;
+  display: block;  */
+}
   
   @media (min-width: 768px) { /* Adjust this breakpoint as needed */
     .timeline {

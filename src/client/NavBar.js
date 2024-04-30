@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import {Link} from "react-router-dom";
 import solesshpe from './photos/solesshpe.png';
 import './NavBar.css';
 
 const NavBar = () => {
+    const [hamburgerOpen, setHamburgerOpen] = useState(false);
+    const toggleHamburger = () =>{
+        setHamburgerOpen(!hamburgerOpen)
+    }
+    
     return (
         <nav className="navBar">
             <Link to="/" className="home-page"><img src={solesshpe} alt="SOLES @ UCLA" /></Link>

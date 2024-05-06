@@ -1,10 +1,18 @@
-ul{
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.hamburger{
+    display: none;
+}
+
+.nav-links{
     list-style: none;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     height: 100%;
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    /* margin: 0; */
+    padding: 0; 
+    margin-left: auto;
 }
 
 .navBar a{
@@ -14,18 +22,17 @@ ul{
     font-size: 22px;
     display: flex;
     align-items: center;
-    height: 100%;
-    padding: 0 1vw;
 }
 
 .navBar{
+    font-family: 'Inter';
     width: 100%;
-    height: 15vh;
+    height: 13vh;
     background-color: #001d3a;
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
-    padding: 0 1vw;
+    /* padding: 0 1vw; */
 }
 
 .home-page img{
@@ -35,14 +42,33 @@ ul{
 
 .navBar ul li{
     margin: 0 1vw;
-    padding: 18px;
+    padding: 15px;
     border-radius: 40px;
+    list-style-type: none;
 }
 
 .navBar ul li:hover{
     background-color: rgb(254,254,84);
     cursor: pointer;
+    transition: 0.4s;
     a{
         color: #001d3a;
+    }
+}
+
+@media (max-width: 1600px) {
+    .hamburger{
+        display: flex;
+        z-index: 10;
+        margin-left: auto;
+        margin-right: 1vw;
+        svg{
+            height: 7vh;
+            width: 7vh;
+        }
+    }
+
+    .nav-links {
+        display: none;
     }
 }

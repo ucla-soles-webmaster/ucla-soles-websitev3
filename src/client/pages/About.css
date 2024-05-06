@@ -3,6 +3,13 @@
 
 h1{
   font-family: 'Inter';
+  font-size: 1vw;
+  text-align: center;
+  font-weight: normal;
+}
+
+.about{
+  min-height: 100vh;
 }
 
 .history{
@@ -42,6 +49,47 @@ h1{
     margin-top: 5px;
   }
 
+.awards{
+  /* background-color: red; */
+  margin-top: 5vh;;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+
+.awards-pic{
+  flex: 0.5;
+  /* background-color: green; */
+  margin-left: 2vw;
+  margin-right: 2vw;
+  background-color: transparent;
+}
+
+.awards-text{
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: white;
+  padding: 5vw;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  height: min-content;
+}
+
+.awards-banner{
+  position: absolute;
+  top: 8%;
+  left: 0;
+  right: 0;
+  bottom: 13%;
+  background-color: #FFF7AB;
+  z-index: -1;
+}
+
+/* 
 .awards-text{
   flex: 0.7;
 }
@@ -71,20 +119,13 @@ h1{
 
 .awards-picture{
   flex: 0.3;
-  /* margin-left: 30px;
-  margin-top: -20px; */
 }
 
 .awards-picture img{
   padding-left: 25px;
   padding-right: 25px;
-  /* width: 39vw;
-  padding: -70px 0; */
-  /* width: 100%; */
-  /* margin: auto;
-  display: block;  */
 }
-  
+   */
   @media (min-width: 768px) { /* Adjust this breakpoint as needed */
     .timeline {
       flex-direction: row;

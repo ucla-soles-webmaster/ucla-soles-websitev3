@@ -68,6 +68,26 @@ export default function About() {
             </div>
 
             <div className="awards">
+                <div className="awards-banner"></div>
+                <div className="awards-pic">
+                    <img src={kellyAwardPic} alt="Award Picture"></img>
+                    <p>Former President Kelly Espino holding award Top 5 Greatest Engineer Groups of UCLA</p>
+                </div>
+`                <div className="awards-text">
+                    <h1>
+                    <h1 style={{fontWeight: "bold"}}>Blue Chip Chapter Award2022 • 2021 • 2020 • 2017 • 2016 • 2015</h1>
+                    Awarded during the annual SHPE Regional Leadership Development Conference to chapters shown to provide outstanding metrics throughout the year, exhibiting growth and success.<br />
+
+                    <h1 style={{fontWeight: "bold"}}>2020 Runner Up for Bruin Development Award</h1>
+                    Recognized by UCLA's Engineering Society for our commitment to developing our members.<br />
+
+                    <h1 style={{fontWeight: "bold"}}>Best Medium Engineering Student Organization at UCLA 2017</h1>
+                    </h1>
+                </div>
+            </div>
+
+
+            {/* <div className="awards">
                 <h1>AWARDS</h1>
                 <div className="awards">
                 <div className="awards-container">
@@ -88,7 +108,7 @@ export default function About() {
                     </div>
                 </div>
                 </div>
-            </div>
+            </div> */}
 
             {/* <div className='timeline'>
                 <VerticalTimeline layout='1-column-left' lineColor='#001d3a'>

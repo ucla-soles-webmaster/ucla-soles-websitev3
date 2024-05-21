@@ -9,17 +9,17 @@ const NavBar = () => {
     const toggleHamburger = () =>{
         setHamburgerOpen(!hamburgerOpen)
     }
-
+    
     return (
         <div className="navigation">
             <nav className="navBar">
                 <Link to="/" className="home-page"><img src={solesshpe} alt="SOLES @ UCLA" /></Link>
                 <ul className={hamburgerOpen ? "nav-links show" : "nav-links"}>
-                    <li><Link to="/" className="home-page">Home</Link></li>
-                    <li><Link to="/about" className="about-page">About</Link></li>
-                    <li><Link to="/contact" className="contact-page">Contact</Link></li>
-                    <li><Link to="/login" className="login-page">Login</Link></li>  
-                    <li><Link to="/techpage" className="tech-page">Technical Projects</Link></li>              
+                    <li><Link to="/" className="home-page" onClick={toggleHamburger}>Home</Link></li>
+                    <li><Link to="/about" className="about-page" onClick={toggleHamburger}>About</Link></li>
+                    <li><Link to="/contact" className="contact-page" onClick={toggleHamburger}>Contact</Link></li>
+                    <li><Link to="/login" className="login-page" onClick={toggleHamburger}>Login</Link></li>  
+                    <li><Link to="/techpage" className="tech-page" onClick={toggleHamburger}>Technical Projects</Link></li>              
                 </ul>
                 <div className="hamburger" onClick={toggleHamburger}>
                     <Hamburger />

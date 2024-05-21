@@ -31,9 +31,9 @@ const merchRouter = express.Router();
 merchRouter.get('/getItems', async (req, res) => {
     try {
         const items = await MerchSchema.find();
-        res.status(200).json(items);
+        return res.status(200).json(items);
     } catch (error) {
-        res.status(500).json({ message: 'An error occurred', error: error.message });
+        return res.status(500).json({ message: 'An error occurred', error: error.message });
     }
 });
 

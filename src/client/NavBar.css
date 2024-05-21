@@ -15,6 +15,8 @@
     margin-left: auto;
 }
 
+
+
 .navBar a{
     text-decoration: none;
     height: 100%;
@@ -56,7 +58,7 @@
     }
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1500px) {
     .hamburger{
         display: flex;
         z-index: 10;
@@ -70,5 +72,19 @@
 
     .nav-links {
         display: none;
+
+        position: absolute;
+        width: 100%; /* Full width */
+        height: 100%;
+        background-color: #001d3a; /* Match navbar color */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        top: 13vh; /* Position below the navbar */
+        left: 0;
+        z-index: 1000;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show nav-links when hamburger is clicked */
     }
 }

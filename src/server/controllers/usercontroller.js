@@ -8,7 +8,7 @@ userRouter.post('/', async (req, res) => {
     try{
         const {name, username, email, admin} = req.body
         if(!username || !admin){
-            res.status(400)
+            return res.status(400)
                 .json({message: "username and password required."});
         }
         const newUser = new UserSchema({
@@ -16,10 +16,10 @@ userRouter.post('/', async (req, res) => {
         })
 
         const savedUser = await newUser.save();
-        res.status(201).json({ message: 'User registered successfully', user:savedUser});
+        return res.status(201).json({ message: 'User registered successfully', user:savedUser});
     }
     catch (error) {
-        res.status(500).json({ message: 'An error occurred', error: error.message });
+        return res.status(500).json({ message: 'An error occurred', error: error.message });
     }
 });
 

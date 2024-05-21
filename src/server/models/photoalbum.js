@@ -11,4 +11,4 @@ const PhotoAlbumSchema = new Schema({
 })
 
 const PhotoAlbum = mongoose.model('photoalbum', PhotoAlbumSchema)
-export default User
+export default PhotoAlbum;

@@ -1,3 +1,5 @@
+
+
 .footer {
     background-color: #001d3a;
     /* width: 100%; */
@@ -5,3 +7,31 @@
     color: white;
     font-size: 25px;
   }
+
+
+.footerDiv{
+display: flex; 
+}
+
+.SOLE{
+display: flex; 
+flex:10% ; 
+align-items: center; 
+}
+
+
+.issues{
+display: flex; 
+left: 50; 
+width: 500px; 
+}
+
+.newsletter{
+  display: flex; 
+  left: 30; 
+}
+.contactUs{
+display: flex; 
+right: 100; 
+width:  px;
+}

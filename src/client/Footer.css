@@ -1,37 +1,32 @@
-
-
 .footer {
-    background-color: #001d3a;
-    /* width: 100%; */
-    bottom: 0;
-    color: white;
-    font-size: 25px;
-  }
-
+  background-color: #001d3a;
+  width: 100%;
+  margin-top: auto;
+  color: white;
+  font-size: 25px;
+}
 
 .footerDiv{
-display: flex; 
+  display: flex; 
+  justify-content: space-between;
+  padding: 20px;
 }
 
-.SOLE{
-display: flex; 
-flex:10% ; 
-align-items: center; 
+.SOLES{
+  display: flex; 
+  flex: 0 0 10%; 
+  align-items: center; 
 }
-
 
 .issues{
-display: flex; 
-left: 50; 
-width: 500px; 
+  display: flex;
+  width: 500px; 
 }
 
 .newsletter{
-  display: flex; 
-  left: 30; 
+  display: flex;
 }
 .contactUs{
-display: flex; 
-right: 100; 
-width:  px;
+  display: flex; 
+  width: auto;
 }

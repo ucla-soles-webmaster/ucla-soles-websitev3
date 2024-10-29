@@ -4,9 +4,6 @@ import './Footer.css';
 const Footer = () => (
     <footer className="footer">
     <div className = "footerDiv">  
-      
-    
-        
         <div className = "issues"> 
             Report website technical issues to:
             <a href = "uclasoles.webmaster@gmail.com" > uclasoles.webmaster@gmail.com </a>
@@ -27,8 +24,6 @@ const Footer = () => (
         <p> byLaws placeholder </p>
         
         </div>
-
-    
      </div>
     </footer>
 );

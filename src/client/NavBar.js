@@ -18,6 +18,8 @@ const NavBar = () => {
                     <li><Link to="/" className="home-page" onClick={toggleHamburger}>Home</Link></li>
                     <li><Link to="/about" className="about-page" onClick={toggleHamburger}>About</Link></li>
                     <li><Link to="/merch" className="merch-page" onClick={toggleHamburger}>Merch</Link></li>
+                    <li><Link to="photoalbum" className="photoalbum-page" onClick={toggleHamburger}>Photo Album</Link></li>
+                    <li><Link to="alumnetwork" className="alumnetwork-page" onClick={toggleHamburger}>Alum Network</Link></li>
                     <li><Link to="/login" className="login-page" onClick={toggleHamburger}>Login</Link></li>  
                     <li><Link to="/techpage" className="tech-page" onClick={toggleHamburger}>Technical Projects</Link></li>              
                 </ul>

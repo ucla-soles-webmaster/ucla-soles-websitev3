@@ -6,7 +6,7 @@ import Merch from './pages/Merch.js';
 import Login from './pages/Login.js';
 import About from './pages/About.js';
 import TechnicalProjects from './pages/TechnicalProjects.js';
-import Footer from './Footer.js';
+import Footer from './Footer.jsx';
 import AlumNetwork from './pages/AlumNetwork.js';
 import PhotoAlbum from './pages/PhotoAlbum.js';
 

@@ -1,3 +1,5 @@
+/* global google */
+
 import {useState, useEffect} from 'react';
 import {jwtDecode} from "jwt-decode";
 
@@ -19,20 +21,22 @@ function Login() {
     }
 
     useEffect(() => {
-        /* global google */
-        google.accounts.id.initialize({
-            client_id: "744790478987-ndu4hi5qtf1nk9lfkhjoj3ii9105aui6.apps.googleusercontent.com",
-            callback: handleCallbackResponse
-        });
-
-        google.accounts.id.renderButton(
-            document.getElementById("signInDiv"),
-            {theme: "outline", size: "large"}
+        if (window.google?.accounts?.id) {
+            // Initialize Google Sign-In only once
+            google.accounts.id.initialize({
+                client_id: "744790478987-ndu4hi5qtf1nk9lfkhjoj3ii9105aui6.apps.googleusercontent.com",
+                callback: handleCallbackResponse,
+            });
+    
+            google.accounts.id.renderButton(
+                document.getElementById("signInDiv"),
+                { theme: "outline", size: "large" }
             );
-        
-        google.accounts.id.prompt();
-            
-        },[]);
+    
+            // Only prompt once to avoid redundant requests
+            google.accounts.id.prompt();
+        }
+    }, []);
 
         return (
             <div className="App">

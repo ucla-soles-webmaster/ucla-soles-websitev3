@@ -1,5 +1,3 @@
-
-
 import solesPrez from "../photos/solespresident.png";
 import prezSig from "../photos/solespresidentsig.png";
 import temp from "../photos/tempimg.png";
@@ -8,14 +6,17 @@ import React from "react";
 import './Home.css';
 
 
-
-
 export default function Home() {
    return (
       
        <div>
           
            <div className= "headerContainer" >
+           <div className="coverImage">
+                <div className="overlay">
+                    <h1 className="coverText">SOLES|SHPE at UCLA</h1>
+                </div>
+            </div>
            <h1 className="WhoWeAre">Who We Are</h1>
            </div>
         
@@ -32,8 +33,6 @@ export default function Home() {
             <img src={temp} alt="Place Holder" className="temp" style={{marginLeft:'0px', marginRight: '100px', width: '35%'}} />
            </div>
 
-
-          
 
 
            <div>
@@ -67,17 +66,6 @@ export default function Home() {
            </p>
           
            </div>
-         
-
-
-
-
-         
-          
-
-
-
-
        </div>
 
 

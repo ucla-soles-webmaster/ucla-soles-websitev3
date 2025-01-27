@@ -2,7 +2,7 @@
 // import { Chrono } from "react-chrono";
 // import { Timeline } from "flowbite-react";
 import React, { useState } from "react";
-import { Timeline } from "react-beautiful-horizontal-timeline";
+// import { Timeline } from "react-beautiful-horizontal-timeline";
 import { HiArrowNarrowRight, HiCalendar } from "react-icons/hi";
 
 import './About.css';
@@ -54,7 +54,7 @@ export default function About() {
             </div>
             <div className="history">
                 <h1>HISTORY</h1>
-                <Timeline
+                {/* <Timeline
                     myList={historyData}
                     labelWidth={labelWidth}
                     amountMove={amountMove}
@@ -64,7 +64,7 @@ export default function About() {
                     eventTextAlignCenter={eventTextAlignCenter}
                     // showSlider={showSlider}
                     arrowsSize={arrowsSize}
-                />                
+                />                 */}
             </div>
 
             <div className="awards">

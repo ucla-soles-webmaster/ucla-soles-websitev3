@@ -1,8 +1,41 @@
+/* Full-width cover image with overlay */
+.coverImage {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  background-image: url('../photos/cover.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Semi-transparent overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(35, 35, 95, 0.75); /* Dark blue with transparency */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Text on top of the image */
+.coverText {
+  color: white;
+  font-size: 3rem; /* Adjust size as needed */
+  font-weight: bold;
+  z-index: 1;
+  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
+}
 
 .WhoWeAre{
     color: rgb(30, 96, 124); 
-  }
-
+}
 
 .PresidentHeader {
 color: rgb(30, 96, 124); 

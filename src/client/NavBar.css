@@ -2,26 +2,24 @@
 
 .hamburger{
     display: none;
+    z-index: 10;
+    margin-left: auto;
+    margin-right: 1vw;
+    cursor: pointer;
 }
 
 .nav-links{
     list-style: none;
-    display: flex;
+    display: flex; /* Inline layout for larger screens */
     align-items: center;
-    flex-wrap: wrap;
-    height: 100%;
-    /* margin: 0; */
-    padding: 0; 
-    margin-left: auto;
+    margin-left: auto; /* Align to the right */
 }
-
-
 
 .navBar a{
     text-decoration: none;
     height: 100%;
     color: white;
-    font-size: 22px;
+    font-size: 18px;
     display: flex;
     align-items: center;
 }
@@ -35,6 +33,10 @@
     /* justify-content: space-between; */
     align-items: center;
     /* padding: 0 1vw; */
+    position: fixed; /* Make the navbar fixed */
+    top: 0; /* Position it at the top of the page */
+    z-index: 100; /* Ensure it appears above other content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .home-page img{
@@ -58,7 +60,7 @@
     }
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 800px) {
     .hamburger{
         display: flex;
         z-index: 10;

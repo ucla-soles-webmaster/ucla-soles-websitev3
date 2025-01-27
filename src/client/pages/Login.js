@@ -1,3 +1,5 @@
+/* global google */
+
 import {useState, useEffect} from 'react';
 import {jwtDecode} from "jwt-decode";
 import axios from 'axios'; 

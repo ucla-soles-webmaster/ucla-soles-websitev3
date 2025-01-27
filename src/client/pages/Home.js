@@ -1,13 +1,9 @@
-
-
 import solesPrez from "../photos/solespresident.png";
 import prezSig from "../photos/solespresidentsig.png";
 import temp from "../photos/tempimg.png";
 import React from "react";
 //import {Link} from "react-router-dom";
 import './Home.css';
-
-
 
 
 export default function Home() {

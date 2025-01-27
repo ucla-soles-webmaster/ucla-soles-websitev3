@@ -1,18 +1,30 @@
 import express from "express";
 import UserSchema from "../models/user.js";
-//const User = require('../models/user')
 
 const userRouter = express.Router();
 
 userRouter.post('/', async (req, res) => {
+    console.log("Request body:", req.body); // Debugging
     try{
-        const {name, username, email, admin} = req.body
-        if(!username || !admin){
+        const {name, email, picture, major, gradDate, admin} = req.body
+        if(!email){
             return res.status(400)
-                .json({message: "username and password required."});
+                .json({message: "Email is required"});
         }
+        // Check if user already exists
+        let user = await UserSchema.findOne({ email });
+        if (user) {
+            // If the user exists but major/gradDate are missing, update the record
+            if (!user.major || !user.gradDate) {
+                user.major = major || user.major;
+                user.gradDate = gradDate || user.gradDate;
+                await user.save();
+            }
+            return res.status(200).json({ message: "User exists", user });
+        }
+
         const newUser = new UserSchema({
-            name, username, email, admin
+            name, email, picture, major, gradDate, admin
         })
 
         const savedUser = await newUser.save();

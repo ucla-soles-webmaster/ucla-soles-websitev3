@@ -9,7 +9,11 @@
 
 /* Styles for image container */
 .image_container {
-  flex: 1; /* Make image container occupy one third of the desktop */
+  display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 /* Styles for text container */
@@ -19,6 +23,18 @@
 
 /* Additional styles for image */
 .image_container img {
-  width: 100%; /* Ensure image fills the container */
-  height: auto; /* Maintain aspect ratio */
+  display: flex;
+  margin-left:auto;
+  margin-right: auto;
+  max-width: 100%;
+    height: auto;
+    /* Maintain aspect ratio */
+    flex: 1 1 auto;
+    /* Allow images to grow and shrink */
+    object-fit: cover;
+
+}
+.overview_container {
+  display: flex;
+  flex-direction: row;
 }

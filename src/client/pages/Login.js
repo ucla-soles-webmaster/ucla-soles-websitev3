@@ -3,6 +3,7 @@
 import {useState, useEffect} from 'react';
 import {jwtDecode} from "jwt-decode";
 import axios from 'axios'; 
+import "./Login.css"
 
 function Login() {
     const [user, setUser] = useState({});

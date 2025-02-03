@@ -51,6 +51,7 @@ const sliderSettings = {
 export default function TechnicalProjects() {
     return (
     <div>
+    <div className="overview_container">
     <div className="techprojects_container">
         <h1 className="techprojects_heading">Technical Projects</h1>
         </div>
@@ -85,6 +86,6 @@ export default function TechnicalProjects() {
     </div>
   </div>
 </div>
-
+</div>
 );
 }

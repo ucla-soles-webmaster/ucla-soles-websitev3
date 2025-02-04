@@ -17,8 +17,8 @@ const UserSchema = new Schema({
     gradDate:{
         type: String
     },
-    admin:{
-        type: Boolean
+    admin: { 
+        type: Boolean, default: false 
     }
 })
 

@@ -6,6 +6,11 @@
   font-size: 25px;
 }
 
+.icon-container{
+  display: flex;
+  flex-direction: row;
+}
+
 .footerDiv{
   display: flex; 
   justify-content: space-between;

@@ -4,6 +4,8 @@
   margin-top: auto;
   color: white;
   font-size: 25px;
+  position: relative;
+  bottom: 0;
 }
 
 .icon-container{

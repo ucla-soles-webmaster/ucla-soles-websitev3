@@ -24,7 +24,7 @@ userRouter.post('/', async (req, res) => {
         }
 
         const newUser = new UserSchema({
-            name, email, picture, major, gradDate, admin
+            name, email, picture, major, gradDate, admin: admin || false
         })
 
         const savedUser = await newUser.save();

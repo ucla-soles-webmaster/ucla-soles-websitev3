@@ -3,6 +3,8 @@
 import {useState, useEffect} from 'react';
 import {jwtDecode} from "jwt-decode";
 import axios from 'axios'; 
+import "./Login.css"
+import sun from "../photos/sunblue 1.png";
 
 function Login() {
     const [user, setUser] = useState({});
@@ -178,18 +180,24 @@ function Login() {
                 {isSignedIn && (
                     <>
                         <div className="banner">
-                            <div className="leftSide">
-                                <img alt="" />
+                            <div className="bannerLeft">
+                                <img src={sun} alt="" />
                             </div>
-                            <div className="rightSide">
+                            <div className="bannerRight">
                                 <h3>{user.name}</h3>
                                 <h3>{user.email}</h3>
                             </div>
                         </div>
-                        <h2>SOLECITO RESOURCES</h2>
-                        <button className="favorite styled" type="button">Textbook Bank</button>
-                        <button className="favorite styled" type="button">Test Bank Google Drive</button>
-                        <button className="favorite styled" type="button">MentorSHPE Slack Channel</button>
+                        <div className="resources">
+                            <div className="resourceTitle"><h2>SOLECITO RESOURCES</h2></div>
+                            <div className="resourceButtons">
+                                <button className="resourceButton" type="button" onClick={() => window.open("", "_blank")}>Textbook Bank</button>
+                                <button className="resourceButton" type="button" onClick={() => window.open("", "_blank")}>Test Bank Google Drive</button>
+                                <button className="resourceButton" type="button" onClick={() => window.open("", "_blank")}>MentorSHPE Slack Channel</button>                                    
+                            </div>
+                       
+                        </div>
+
                     </>
                 )}
             </div>

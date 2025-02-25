@@ -26,7 +26,6 @@ function Login() {
         // console.log("Google Sign-In Response:", response);
         // console.log("Encoded JWT ID token: " + response.credential);
         var userObject = jwtDecode(response.credential);
-        setUser(userObject);
             // Check if the user exists or needs additional info
         fetch("http://localhost:5555/register", {
             method: "POST",
@@ -41,14 +40,24 @@ function Login() {
         })
         .then((res) => res.json())
         .then((data) => {
+            setIsSignedIn(true); // User is signed in
+            let userData = {
+                name: userObject.name,
+                email: userObject.email,
+                picture: userObject.picture,
+                major: data.user?.major || "",
+                gradDate: data.user?.gradDate || ""
+            };
+            setUser(userData);
+
             if (data.user && data.user.major && data.user.gradDate) {
-                // User exists and has all required fields
+                // Existing user with all required fields
                 setFormVisible(false);
             } else {
-                // User needs to provide additional information
+                // New user needs to provide major & graduation date
                 setFormVisible(true);
             }
-            setIsSignedIn(true);
+            localStorage.setItem("user", JSON.stringify(userData));
         })
         .catch((error) => console.error("Error checking user:", error));
     }
@@ -59,6 +68,7 @@ function Login() {
         setFormVisible(false);
         setIsSignedIn(false);
         document.getElementById("signInDiv").hidden = false;
+        localStorage.removeItem("user");
     }
 
     function handleInputChange(event) {
@@ -85,34 +95,46 @@ function Login() {
     function handleFormSubmit(event) {
         event.preventDefault();
         // Save user data to MongoDB
-        const userData = {
-            name: user.name,
-            email: user.email,
-            picture: user.picture,
+        const updatedUser = {
+            ...user,
             major: additionalInfo.major,
             gradDate: additionalInfo.graduationDate,
-            admin: false
         };
-        console.log("Submitting userData:", userData); // Debugging
+        console.log("Submitting userData:", updatedUser); // Debugging
         fetch("http://localhost:5555/register", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(userData),
+          body: JSON.stringify(updatedUser),
         })
-            .then((response) => response.json())
-            .then((data) => {
+        .then((response) => response.json())
+        .then((data) => {
             console.log("User saved:", data);
-            setFormVisible(false); // Hide form after submission
-            })
-            .catch((error) => {
+            setUser(updatedUser);
+            setFormVisible(false);
+            localStorage.setItem("user", JSON.stringify(updatedUser));
+        })
+        .catch((error) => {
             console.error("Error saving user:", error);
-            });
+        });
     }
 
     useEffect(() => {
-        /* global google */
+        const cachedUser = localStorage.getItem("user");
+        if (cachedUser) {
+            const userData = JSON.parse(cachedUser);
+            setUser(userData);
+            setIsSignedIn(true);
+    
+            // If major & gradDate exist, don't show the form
+            if (userData.major && userData.gradDate) {
+                setFormVisible(false);
+            } else {
+                setFormVisible(true);
+            }
+        }
+
         google.accounts.id.initialize({
             client_id: "744790478987-ndu4hi5qtf1nk9lfkhjoj3ii9105aui6.apps.googleusercontent.com",
             callback: handleCallbackResponse
@@ -134,7 +156,7 @@ function Login() {
                 <div id="signInDiv"></div>
                 {isSignedIn && <button onClick={handleSignOut}>Sign Out</button>}
                 
-                {isFormVisible && (
+                {isFormVisible ? (
                     <form onSubmit={handleFormSubmit}>
                         <label>
                             Major:
@@ -176,16 +198,16 @@ function Login() {
                         </label>
                         <button type="submit">Submit</button>
                     </form>
-                )}
-                {isSignedIn && (
+                ) : (
                     <>
                         <div className="banner">
                             <div className="bannerLeft">
                                 <img src={sun} alt="" />
+                                <img src={user.picture} alt="" />
                             </div>
                             <div className="bannerRight">
                                 <h3>{user.name}</h3>
-                                <h3>{user.email}</h3>
+                                <h3>Major: {user.major ? user.major : "Not Provided"}</h3>
                             </div>
                         </div>
                         <div className="resources">

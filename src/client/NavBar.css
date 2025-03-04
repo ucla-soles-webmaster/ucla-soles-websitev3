@@ -2,7 +2,6 @@
 
 .navbar {
     background-color: #001d3a !important;
-    height: 14vh;
     display: flex;
     align-items: center;
     padding: 0 1rem; /* Adjust padding if needed */

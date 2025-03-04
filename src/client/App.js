@@ -10,6 +10,8 @@ import Footer from './Footer.jsx';
 import AlumNetwork from './pages/AlumNetwork.js';
 import PhotoAlbum from './pages/PhotoAlbum.js';
 
+import Initiatives from './pages/Initiatives.js';
+
 function App() {
   return (
     <div className="App">
@@ -23,6 +25,8 @@ function App() {
           <Route path="/login" element={<Login />}/>
           <Route path="/alumnetwork" element={<AlumNetwork/>}/>
           <Route path="/techpage" element={<TechnicalProjects />}/>
+
+          <Route path="/initiatives" element={<Initiatives />} />
         </Routes>
       </div>
       <Footer />

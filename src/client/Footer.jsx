@@ -28,9 +28,7 @@ const Footer = () => (
 
         </div>
         <div className="rightDiv">
-        <div style={{width: '85%', paddingTop: 12, paddingBottom: 12, paddingLeft: 15, paddingRight: 15, background: '#FEFE54', boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)', borderRadius: 12, overflow: 'hidden', border: '1.50px black solid', justifyContent: 'flex-end', alignItems: 'center', display: 'inline-flex'}}>
-    <div style={{width: 233, height: 33, color: 'black', fontSize: 20, fontFamily: 'Inter', fontWeight: '600', letterSpacing: 2.40, wordWrap: 'break-word'}}>JOIN NEWSLETTER</div>
-</div>
+        <button type="button" class="btn btn-primary btn-lg">Join Newsletter</button>
         <div style={{color: 'white', fontSize: 20, fontFamily: 'Inter', fontWeight: '400', wordWrap: 'break-word', marginTop: '25px'}}>SOLES|SHPE at UCLA</div>
         </div>
     </div>

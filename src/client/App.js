@@ -9,6 +9,7 @@ import TechnicalProjects from './pages/TechnicalProjects.js';
 import Footer from './Footer.jsx';
 import AlumNetwork from './pages/AlumNetwork.js';
 import PhotoAlbum from './pages/PhotoAlbum.js';
+import EBoard from './pages/Eboard.js';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/login" element={<Login />}/>
           <Route path="/alumnetwork" element={<AlumNetwork/>}/>
           <Route path="/techpage" element={<TechnicalProjects />}/>
+          <Route path="/eboard" element={<Eboard />}/>
         </Routes>
       </div>
       <Footer />

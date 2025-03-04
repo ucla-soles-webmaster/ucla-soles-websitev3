@@ -1,8 +1,15 @@
-/* Full-width cover image with overlay */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+.container {
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: 100% !important;
+}
+/* Full-width cover image with Bootstrap utility classes */
 .coverImage {
   position: relative;
   width: 100%;
-  height: 400px; /* Adjust height as needed */
+  height: 100vh; /* Full viewport height */
   background-image: url('../photos/cover.jpeg');
   background-size: cover;
   background-position: center;
@@ -11,7 +18,7 @@
   justify-content: center;
 }
 
-/* Semi-transparent overlay */
+/* Overlay for better readability */
 .overlay {
   position: absolute;
   top: 0;
@@ -24,13 +31,80 @@
   justify-content: center;
 }
 
-/* Text on top of the image */
+/* Responsive text on the cover image */
+.coverText{
+  font-size: 4rem;
+  font-weight: bolder;
+  font-family: 'Inter';
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.display-3{
+  font-weight: 900;
+}
+
+/* Styling for the Who We Are section */
+.WhoWeAre {
+  color: rgb(30, 96, 124);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.WhoWeAreParagraph{
+  font-family: 'Inter';
+}
+
+/* Message from the President section */
+.PresidentHeader {
+  color: rgb(30, 96, 124);
+  text-shadow: 4px 2px 2px rgba(0, 0, 0, 0.3);
+  font-size: 1.8rem;
+}
+
+.PresidentMessage {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Making images responsive */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* .coverImage {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url('../photos/cover.jpeg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(35, 35, 95, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .coverText {
   color: white;
-  font-size: 3rem; /* Adjust size as needed */
+  font-size: 3rem;
   font-weight: bold;
   z-index: 1;
-  /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); */
 }
 
 .WhoWeAre{
@@ -45,4 +119,4 @@ display: flex;
 
 .PresidentMessage{
 display: flex; 
-}
+} */

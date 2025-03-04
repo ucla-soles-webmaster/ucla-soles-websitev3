@@ -1,6 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-.hamburger{
+.navbar {
+    background-color: #001d3a !important;
+    height: 14vh;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem; /* Adjust padding if needed */
+}
+
+.navbar-nav .nav-item {
+    padding: 0 0.8rem; /* Adjust horizontal padding between items */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    font-family: 'Inter';
+    transition: font-size 0.3s ease-in-out;
+    border-radius: 40px;
+}
+
+.navbar-nav .nav-link:hover{
+    color: #001d3a;
+    background-color: rgb(254,254,84);
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+@media (max-width: 992px) {
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* .hamburger{
     display: none;
     z-index: 10;
     margin-left: auto;
@@ -10,9 +49,9 @@
 
 .nav-links{
     list-style: none;
-    display: flex; /* Inline layout for larger screens */
+    display: flex; 
     align-items: center;
-    margin-left: auto; /* Align to the right */
+    margin-left: auto;
 }
 
 .navBar a{
@@ -30,12 +69,10 @@
     height: 13vh;
     background-color: #001d3a;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
-    /* padding: 0 1vw; */
-    position: fixed; /* Make the navbar fixed */
-    top: 0; /* Position it at the top of the page */
-    z-index: 100; /* Ensure it appears above other content */
+    position: fixed;
+    top: 0;
+    z-index: 100; 
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -76,17 +113,17 @@
         display: none;
 
         position: absolute;
-        width: 100%; /* Full width */
+        width: 100%;
         height: 100%;
-        background-color: #001d3a; /* Match navbar color */
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
-        top: 13vh; /* Position below the navbar */
+        background-color: #001d3a;
+        flex-direction: column; 
+        align-items: center; 
+        top: 13vh; 
         left: 0;
         z-index: 1000;
     }
 
     .nav-links.show {
-        display: flex; /* Show nav-links when hamburger is clicked */
+        display: flex;
     }
-}
+} */

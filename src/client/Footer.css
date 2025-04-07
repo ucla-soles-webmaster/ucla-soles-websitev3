@@ -1,16 +1,18 @@
-.footer {
-  background-color: #001d3a;
-  width: 100%;
-  margin-top: auto;
-  color: white;
-  font-size: 25px;
-  position: relative;
-  bottom: 0;
+.gradient-line-hor {
+  margin: auto;
+  margin-top: 0.8vw;
+  height: .4vw;
+  width: 90%;
+  background: linear-gradient(to right,#fd662f 0,#fd662f 9%,#72a8be 9%,#72a8be 22%,#0070c0 22%,#0070c0 50%,#9ee0f9 50%,#9ee0f9 100%);
 }
 
 .icon-container{
   display: flex;
   flex-direction: row;
+}
+
+.icon-container img{
+  width: 100%;
 }
 
 .footerDiv{
@@ -36,4 +38,23 @@
 .contactUs{
   display: flex; 
   width: auto;
+}
+
+.middleDiv{
+  display: flex;
+  flex-direction: column;
+
+  /*style={{left: 29.03, top: 9, position: 'relative', textAlign: 'center', color: 'white', fontSize: 20, fontFamily: 'Inter', fontWeight: '700', wordWrap: 'break-word'}}*/
+}
+
+.px-6 {
+  padding-right: 4rem !important;
+  padding-left: 4rem !important;
+}
+
+@media (min-width: 992px) {
+  .px-lg-6 {
+    padding-left: 3.5rem !important;
+    padding-right: 3.5rem !important;
+  }
 }

@@ -2,9 +2,6 @@
 /* Component / ReactJS Library Imports */
 
 import React, { Component } from 'react';
-import Footer from '../components/Footer';
-import Navigation from '../components/Navigation';
-import PagePhoto from '../components/PagePhoto';
 import coverPhoto from '../photos/Eboard/group24.jpg';
 
 ///////////////////////////////////////////////////////////////
@@ -27,9 +24,9 @@ import coverPhoto from '../photos/Eboard/group24.jpg';
 /* Tech */ import Diana from '../photos/Eboard/Diana24.png'
 
 /* CEED Staff */
-import Sherry from '../photos/Eboard/CEED/sherry.jpg'
-import Anabella from '../photos/Eboard/CEED/anabella.jpg'
-import Cathy from '../photos/Eboard/CEED/cathy.jpg'
+import Sherry from '../photos/Eboard/sherry.jpg'
+import Anabella from '../photos/Eboard/anabella.jpg'
+import Cathy from '../photos/Eboard/cathy.jpg'
 
 
 
@@ -43,9 +40,9 @@ import './EBoard.css';
 ///////////////////////////////////////////////////////////////
 /* Accent Photo Imports */
 
-import rightsun from '../../Photos/Icons/rightsun.png'
-import leftsun from '../../Photos/Icons/leftsun.png';
-import sun from '../../Photos/Icons/sun.png'
+// import rightsun from '../../Photos/Icons/rightsun.png'
+// import leftsun from '../../Photos/Icons/leftsun.png';
+// import sun from '../../Photos/Icons/sun.png'
 
 
 class EBoard extends Component {
@@ -178,10 +175,6 @@ class EBoard extends Component {
 
         return (
             <div>
-                <Navigation transparentNav={true} />
-                <PagePhoto imageSource={coverPhoto} title={"Executive Board"}></PagePhoto>
-                
-
                 {/* Page Title Header */}
                 <hr className="introBar" /> 
                     <div className="introbox" style={{textAlign: 'center'}}>
@@ -194,8 +187,8 @@ class EBoard extends Component {
                                     Please feel free to reach out to them via their email.
                                 </div>
                         </div>
-                        <img id="rightsunLanding" src={rightsun} alt="Right SOLES Sun" />
-                        <img id="leftsunLanding" src={leftsun} alt="Left SOLES Sun" />
+                        {/* <img id="rightsunLanding" src={rightsun} alt="Right SOLES Sun" />
+                        <img id="leftsunLanding" src={leftsun} alt="Left SOLES Sun" /> */}
                     </div>
                 <hr className="introBar" />    
                 <br/>
@@ -216,7 +209,7 @@ class EBoard extends Component {
                             All members are encouraged to run for positions!
                         </div>                               
                         <hr className = "BoardIntroBar" ></hr>
-                        <img className = "BoardPageSun" src= {sun} alt="Yellow Sun" ></img>
+                        {/* <img className = "BoardPageSun" src= {sun} alt="Yellow Sun" ></img> */}
                         <br/>
                         <div className = "staffMembersBoard">
                             CEED Advisors
@@ -257,13 +250,6 @@ class EBoard extends Component {
                     </div>
                 
                 </body1> {/* End Photo Grid Section */} 
-
-
-                <br/>
-                <br/>
-                <br/>
-                <br/>
-                <Footer/>
             </div>
             
         );

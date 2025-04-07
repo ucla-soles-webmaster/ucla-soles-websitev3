@@ -6,11 +6,11 @@ import Merch from './pages/Merch.js';
 import Login from './pages/Login.js';
 import About from './pages/About.js';
 import TechnicalProjects from './pages/TechnicalProjects.js';
-import Footer from './Footer.jsx';
+import Footer from './Footer.js';
 import AlumNetwork from './pages/AlumNetwork.js';
 import PhotoAlbum from './pages/PhotoAlbum.js';
 import Initiatives from './pages/Initiatives.js';
-import EBoard from './pages/Eboard.js';
+import EBoard from './pages/EBoard.js';
 
 function App() {
   return (
@@ -26,7 +26,7 @@ function App() {
           <Route path="/alumnetwork" element={<AlumNetwork/>}/>
           <Route path="/techpage" element={<TechnicalProjects />}/>
           <Route path="/initiatives" element={<Initiatives />} />
-          <Route path="/eboard" element={<Eboard />}/>
+          <Route path="/eboard" element={<EBoard />}/>
         </Routes>
       </div>
       <Footer />

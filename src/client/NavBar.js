@@ -7,6 +7,7 @@ const NavBar = () => {
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
   
     return (
+      <>
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
         <div className="container-fluid">
           {/* Logo */}
@@ -51,6 +52,8 @@ const NavBar = () => {
           </div>
         </div>
       </nav>
+      <div style={{ height: '76px' }}></div>
+      </>
     );
   };
   

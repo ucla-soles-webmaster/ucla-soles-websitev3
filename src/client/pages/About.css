@@ -1,6 +1,48 @@
 /* @import '../../../node_modules/react-beautiful-horizontal-timeline/card.css'; */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+.timeline-container {
+  border-top: 2px solid #ccc;
+  position: relative;
+  gap: 1rem;
+  overflow-x: auto;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 80px;
+  z-index: 1;
+}
+
+.timeline-card {
+  max-width: 200px;
+  flex: 1;
+  position: relative;
+  text-align: center;
+}
+
+.timeline-dot {
+  width: 50px;
+  height: 50px;
+  background-color: #ffd600;
+  border-radius: 50%;
+  position: absolute;
+  top: -26px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-year {
+  font-weight: 600;
+  margin-top: 40px;
+}
+
+.bg-yellow {
+  background-color: #FFF7AB;
+}
+
 h1{
   font-family: 'Inter';
   font-size: 1vw;
@@ -23,31 +65,26 @@ h1{
 .mission-and-vision{
     font-size: 1vw;
 }
+  
+.timeline {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 
-.timeline-container {
-    overflow-x: auto;
-    padding: 20px;
-  }
-  
-  .timeline {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-  }
-  
-  .timeline-event {
-    display: flex;
-    flex-direction: column;
-    margin: 20px 0;
-  }
-  
-  .event-year {
-    font-weight: bold;
-  }
-  
-  .event-content h3 {
-    margin-top: 5px;
-  }
+.timeline-event {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.event-year {
+  font-weight: bold;
+}
+
+.event-content h3 {
+  margin-top: 5px;
+}
 
 .awards{
   /* background-color: red; */

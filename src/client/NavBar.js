@@ -46,6 +46,9 @@ const NavBar = () => {
                 <Link className="nav-link" to="/techpage" onClick={() => setHamburgerOpen(false)}>Technical Projects</Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to="/alumnet" onClick={() => setHamburgerOpen(false)}>Alumni Network</Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to="/login" onClick={() => setHamburgerOpen(false)}>Account</Link>
               </li>
             </ul>

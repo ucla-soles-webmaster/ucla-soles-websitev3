@@ -23,7 +23,7 @@ function App() {
           <Route path="/merch" element={<Merch />}/>
           <Route path="/photoalbum" element={<PhotoAlbum/>}/>
           <Route path="/login" element={<Login />}/>
-          <Route path="/alumnetwork" element={<AlumNetwork/>}/>
+          <Route path="/alumnet" element={<AlumNetwork/>}/>
           <Route path="/techpage" element={<TechnicalProjects />}/>
           <Route path="/initiatives" element={<Initiatives />} />
           <Route path="/eboard" element={<EBoard />}/>

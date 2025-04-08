@@ -1,3 +1,5 @@
+import "./Initiatives.css";
+
 export default function Initiatives() {
     return (
         <div>

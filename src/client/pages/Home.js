@@ -11,13 +11,13 @@ export default function Home() {
             {/* Full-width cover section */}
             <div className="coverImage d-flex align-items-center justify-content-center">
                 <div className="overlay text-center text-white">
-                    <h1 className="coverText display-3">SOLES|SHPE at UCLA</h1>
+                    <h2 className="coverText display-3">SOLES|SHPE at UCLA</h2>
                 </div>
             </div>
  
             {/* Who We Are Section */}
             <div className="container my-5">
-                <h1 className="WhoWeAre text-center">Who We Are</h1>
+                <h2 className="WhoWeAre text-center">Who We Are</h2>
                 <div className="row align-items-center mx-auto" style={{ maxWidth: "90%" }}>
                     <div className="col-md-7">
                         <p className="WhoWeAreParagraph">
@@ -29,6 +29,10 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            {/*Google Calendar */}
+            <div className="calendar bg-light p-4 rounded my-5">
+                <h2 className="calendarTitle text-center mb-4">SOLES Calendar</h2>
+            </div>
  
             {/* President's Message Section */}
             <div className="container my-5">
@@ -37,7 +41,7 @@ export default function Home() {
                         <img src={solesPrez} alt="Soles President" className="img-fluid rounded shadow" />
                     </div>
                     <div className="col-md-9">
-                        <h1 className="WhoWeAre text-center">A Message From Our President</h1>
+                        <h2 className="WhoWeAre text-center">A Message From Our President</h2>
                         <p className="PresidentMessage">
                             Bienvenido todos and welcome to the SOLES familia,
                             the current recognized top UCLA Engineering Organization. SOLES|SHPE at UCLA prides itself in being

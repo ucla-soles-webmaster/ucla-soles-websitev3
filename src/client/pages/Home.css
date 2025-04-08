@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+.calendarTitle{
+  color: rgb(30, 96, 124);
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
 .container {
   padding: 0 !important;
   margin: 0 !important;

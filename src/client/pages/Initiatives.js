@@ -1,4 +1,5 @@
 import "./Initiatives.css";
+import React from "react";
 
 export default function Initiatives() {
     return (

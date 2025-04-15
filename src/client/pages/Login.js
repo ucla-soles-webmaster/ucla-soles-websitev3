@@ -1,12 +1,15 @@
 /* global google */
 
 import {useState, useEffect} from 'react';
+import { useNavigate } from "react-router-dom";
 import {jwtDecode} from "jwt-decode";
 import axios from 'axios'; 
 import "./Login.css"
 import sun from "../photos/sunblue 1.png";
 
+
 function Login() {
+    const navigate = useNavigate();
     const [user, setUser] = useState({});
     const [additionalInfo, setAdditionalInfo] = useState({
         major: "",
@@ -213,9 +216,11 @@ function Login() {
                         <div className="resources">
                             <div className="resourceTitle"><h2>SOLECITO RESOURCES</h2></div>
                             <div className="resourceButtons">
+                                <button className="resourceButton" type="button" onClick={() => navigate("/alumnet")}>Alumni Network</button>
+                                <button className="resourceButton" type="button" onClick={() => navigate("/photoalbum")}>Photo Album</button>
                                 <button className="resourceButton" type="button" onClick={() => window.open("", "_blank")}>Textbook Bank</button>
                                 <button className="resourceButton" type="button" onClick={() => window.open("", "_blank")}>Test Bank Google Drive</button>
-                                <button className="resourceButton" type="button" onClick={() => window.open("", "_blank")}>MentorSHPE Slack Channel</button>                                    
+                                <button className="resourceButton" type="button" onClick={() => window.open("", "_blank")}>MentorSHPE Slack Channel</button>
                             </div>
                        
                         </div>

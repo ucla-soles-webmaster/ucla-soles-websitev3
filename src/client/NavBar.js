@@ -37,13 +37,13 @@ const NavBar = () => {
                 <Link className="nav-link" to="/merch" onClick={() => setHamburgerOpen(false)}>Merch</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/photoalbum" onClick={() => setHamburgerOpen(false)}>Photo Album</Link>
-              </li>
-              <li className="nav-item">
                 <Link className="nav-link" to="/initiatives" onClick={() => setHamburgerOpen(false)}>Initiatives</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/techpage" onClick={() => setHamburgerOpen(false)}>Technical Projects</Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/eboard" onClick={() => setHamburgerOpen(false)}>EBoard</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/alumnet" onClick={() => setHamburgerOpen(false)}>Alumni Network</Link>

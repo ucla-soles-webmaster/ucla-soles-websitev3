@@ -2,6 +2,7 @@ import solesPrez from "../photos/solespresident.png";
 import prezSig from "../photos/solespresidentsig.png";
 import temp from "../photos/tempimg.png";
 import React from "react";
+import Calendar from "./Calendar.js";
 import './Home.css';
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
             {/*Google Calendar */}
             <div className="calendar bg-light p-4 rounded my-5">
                 <h2 className="calendarTitle text-center mb-4">SOLES Calendar</h2>
+                {/* {Calendar} */}
             </div>
  
             {/* President's Message Section */}

@@ -8,7 +8,7 @@ import "./Login.css"
 import sun from "../photos/sunblue 1.png";
 
 
-function Login() {
+export default function Login() {
     const navigate = useNavigate();
     const [user, setUser] = useState({});
     const [additionalInfo, setAdditionalInfo] = useState({
@@ -230,5 +230,3 @@ function Login() {
             </div>
             )
 }
-
-export default Login;

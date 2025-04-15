@@ -1,29 +1,31 @@
-// import React, {Component} from 'react'
-// import FullCalendar from '@fullcalendar/react'
-// import dayGridPlugin from '@fullcalendar/daygrid'
-// import timeGridPlugin from '@fullcalendar/timegrid'
-// import interactionPlugin from '@fullcalendar/interaction'
-// import listPlugin from '@fullcalendar/list'
-// import googleCalendarPlugin from '@fullcalendar/google-calendar'
-// import './Calendar.css'
+import React, {Component, useState} from 'react'
+import FullCalendar from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import timeGridPlugin from '@fullcalendar/timegrid'
+import interactionPlugin from '@fullcalendar/interaction'
+import listPlugin from '@fullcalendar/list'
+import googleCalendarPlugin from '@fullcalendar/google-calendar'
+import './Calendar.css'
 
-// export default function Calendar() {
-//   function handleEventClick() {
-//     this.setState({eventIsClicked: true});
-//   }
+export default function Calendar() {
+    const [clicked, setEventClicked] = useState(false);
+    // function handleEventClick() {
+    //     this.setState({eventIsClicked: true});
+    // }
 
-//   function handleEventNOTClick() {
-//     this.setState({eventIsClicked: false});
-//   }
-//   state = {
-//     weekendsVisible: true,
-//     currentEvents: [],
-//     clicked: false,
-//     clickedTitle: '',
-//     clickedStartDate: '',
-//     clickedTime: '',
-//     clickedEvent: []
-//   }
+    // function handleEventNOTClick() {
+    //     this.setState({eventIsClicked: false});
+    // }
+    // state = {
+    //     weekendsVisible: true,
+    //     currentEvents: [],
+    //     clicked: false,
+    //     clickedTitle: '',
+    //     clickedStartDate: '',
+    //     clickedTime: '',
+    //     clickedEvent: []
+    // }
+}
 // //   render() {
 // //     if(this.state.clicked){
 // //     return (

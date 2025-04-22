@@ -19,8 +19,8 @@ const Footer = () => (
         {/* Middle Section */}
         <div className="col-md-4 order-3 order-md-2 mb-4 d-flex flex-column align-items-center justify-content-center">
           <div className="mb-2 d-flex gap-3">
-            <a class="btn" href="https://www.instagram.com/uclasoles?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" role="button"><img src={Insta} alt="Instagram" width="32" height="32" /></a>
-            <a class="btn" href="https://www.linkedin.com/groups/13937942/" role="button"><img src={Link} alt="LinkedIn" width="32" height="32" /></a>
+            <a className="btn" href="https://www.instagram.com/uclasoles?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" role="button"><img src={Insta} alt="Instagram" width="32" height="32" /></a>
+            <a className="btn" href="https://www.linkedin.com/groups/13937942/" role="button"><img src={Link} alt="LinkedIn" width="32" height="32" /></a>
           </div>
           <p className="text-center mb-0 fs-6">Society of Latinx Engineers and Scientists &copy; 2025</p>
         </div>

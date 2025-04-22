@@ -33,7 +33,7 @@ export default function Home() {
             {/*Google Calendar */}
             <div className="calendar bg-light p-4 rounded my-5">
                 <h2 className="calendarTitle text-center mb-4">SOLES Calendar</h2>
-                {/* {Calendar} */}
+                <Calendar />
             </div>
  
             {/* President's Message Section */}

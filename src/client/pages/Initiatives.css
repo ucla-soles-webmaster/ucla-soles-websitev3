@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #001d3a;
+}
+
+
+/* header */
+
+.h1init {
+  text-align: center;
+  font-size: 3.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  color: #001d3a
+
+}
+
+.initIntro {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0 10% 2rem;
+  }
+  
+  .introBar {
+    width: 50%;
+    border: 0.1vw solid #001d3a;
+    margin: 2% auto;
+  }
+  
+  .h1init {
+    margin-top: 0.1vw;
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 3.1vw;
+    color: #001d3a;
+
+  }
+
+
+  
+
+  /* Responsive */
+

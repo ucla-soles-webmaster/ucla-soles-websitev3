@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import NavBar from './NavBar.js';
 import {Route, Routes} from "react-router-dom"
 import Home from './pages/Home.js';
@@ -8,7 +9,6 @@ import About from './pages/About.js';
 import TechnicalProjects from './pages/TechnicalProjects.js';
 import Footer from './Footer.js';
 import AlumNetwork from './pages/AlumNetwork.js';
-import PhotoAlbum from './pages/PhotoAlbum.js';
 import Initiatives from './pages/Initiatives.js';
 import EBoard from './pages/EBoard.js';
 
@@ -21,7 +21,6 @@ function App() {
           <Route path="/" element={<Home />}/>
           <Route path="/about" element={<About />}/>
           <Route path="/merch" element={<Merch />}/>
-          <Route path="/photoalbum" element={<PhotoAlbum/>}/>
           <Route path="/login" element={<Login />}/>
           <Route path="/alumnet" element={<AlumNetwork/>}/>
           <Route path="/techpage" element={<TechnicalProjects />}/>

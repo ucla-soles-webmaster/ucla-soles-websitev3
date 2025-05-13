@@ -48,3 +48,7 @@
 .resourceButton:hover {
     background-color: #D9D9D9;
 }
+
+.App{
+    margin-top: 50px;
+}

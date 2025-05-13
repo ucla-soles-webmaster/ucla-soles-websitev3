@@ -44,6 +44,7 @@ export default function AwardsSection() {
 
   return (
     <div className="">
+      {/* <div "statements" */}
       <h2 className="mission fw-bold">Mission Statement</h2>
       <p>SOLES changes lives by empowering the Hispanic community to realize its fullest potential and to impact the world through STEM awareness, access, support, and development. Learn more about SHPE's mission.</p>
       <h2 className="vision fw-bold">Vision</h2>
@@ -76,7 +77,7 @@ export default function AwardsSection() {
       </div> 
 
       {/* Full-width yellow background section */}
-      <div className="position-relative w-100 mb-5">
+      <div className="awards position-relative w-100 mb-5">
         {/* Yellow background */}
         <div className="bg-yellow w-100 py-4">
           <div className="container">

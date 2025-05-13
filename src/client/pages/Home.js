@@ -38,6 +38,48 @@ export default function Home() {
  
             {/* President's Message Section */}
             <div className="container my-5">
+                <h2 className="WhoWeAre text-center mb-4">A Message From Our President</h2>
+                <div className="mx-auto" style={{ maxWidth: "90%" }}>
+                    <div className="clearfix">
+                    <img
+                        src={solesPrez}
+                        alt="Soles President"
+                        className="img-fluid rounded shadow me-4 mb-3 float-md-start"
+                        style={{ width: "250px", maxWidth: "40%" }}
+                    />
+                    <p className="PresidentMessage text-start">
+                        Bienvenido todos and welcome to the SOLES familia,
+                        the current recognized top UCLA Engineering Organization. SOLES|SHPE at UCLA prides itself in being
+                        an organization that seeks to elevate its members to excel in all aspects of their lives. We celebrate the unique
+                        qualities and experiences Latinx individuals contribute in engineering, empowering our members to have confidence in
+                        their abilities, regardless of individual circumstances. We hold four chapter pillars: academic development, professional
+                        development, community outreach, and recruitment/retention, which we align with our goals and mission in all of our endeavors.
+                        Please use this site as a resource to explore how we reach our goals and how our members benefit from our interdisciplinary
+                        academic resources, community building events, community outreach initiatives, and wide-spread industry partnerships! With these
+                        tools and the connections they bring, we hope to pave the way for a future in which all Latinx/Hispanic students are empowered, both
+                        at UCLA and in the greater Los Angeles community, to pursue a STEM degree and achieve high standards. On starting my presidency, I
+                        aim to fortify the relationships within our familia to increase our impact on our communities. Ever since that first summer beach bonfire,
+                        I've witnessed the incredible amount of good SOLES produces for its members and its community, despite various obstacles. If I'm being honest,
+                        if it weren't for the connections I've made in SOLES, I'm unsure if I would be as successful as I am now. I'm a first-generation Mexican college
+                        student as many of you are, both parents never passed 3rd grade, and I had little exposure to engineering before coming to UCLA. Heck! If it weren't
+                        for my inspiring high school teacher, who left the engineering workforce to inspire students, I wouldn't be here today. I would love to continue to
+                        impact that kind of change as the next president of SOLES, leading my amazing team of like-minded individuals. <br/><br/>Con mucho amor and lots of gratitude for the amazing
+                        mentors that have propelled me this far,
+                    </p>
+                    <div className="signature text-end">
+                        <p className="PresidentName fw-bold mt-4">Emanuel Zavalza</p>
+                        <img src={prezSig} alt="Soles President Signature" className="img-fluid mb-2" style={{ width: '15%' }} />
+                        <p className="PresidentInfo">
+                            President 2024–2025<br />
+                            Computer Engineering B.S.<br />
+                            UCLA Class of 2025
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    
+            {/* <div className="container my-5">
                 <div className="row align-items-center mx-auto" style={{ maxWidth: "90%" }}>
                     <div className="col-md-3 text-center">
                         <img src={solesPrez} alt="Soles President" className="img-fluid rounded shadow" />
@@ -72,7 +114,7 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

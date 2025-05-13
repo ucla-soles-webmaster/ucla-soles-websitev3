@@ -8,7 +8,6 @@ import axios from 'axios';
 import "./Login.css"
 import sun from "../photos/sunblue 1.png";
 
-
 export default function Login() {
     const navigate = useNavigate();
     const [user, setUser] = useState({});
@@ -71,7 +70,7 @@ export default function Login() {
         setAdditionalInfo({ major: "", graduationDate: "" });
         setFormVisible(false);
         setIsSignedIn(false);
-        document.getElementById("signInDiv").hidden = false;
+        // document.getElementById("signInDiv").hidden = false;
         localStorage.removeItem("user");
     }
 
@@ -137,28 +136,27 @@ export default function Login() {
             } else {
                 setFormVisible(true);
             }
+            return;
         }
 
         google.accounts.id.initialize({
             client_id: "744790478987-ndu4hi5qtf1nk9lfkhjoj3ii9105aui6.apps.googleusercontent.com",
-            callback: handleCallbackResponse
+            callback: handleCallbackResponse,
+            auto_select: true
         });
 
-        if (!window.promptCalled) {
-            google.accounts.id.renderButton(
-                document.getElementById("signInDiv"),
-                {theme: "outline", size: "large"}
-            );
-            
-            google.accounts.id.prompt();
-            window.promptCalled = true; // Prevent multiple calls
-        }
+        google.accounts.id.renderButton(
+            document.getElementById("signInDiv"),
+            { theme: "outline", size: "large" }
+        );
+    
+        google.accounts.id.prompt();
         },[]);
 
         return (
             <div className="App">
-                <div id="signInDiv"></div>
-                {isSignedIn && <button onClick={handleSignOut}>Sign Out</button>}
+                {!isSignedIn && <div id="signInDiv"></div>}
+                {/* {isSignedIn && <button onClick={handleSignOut}>Sign Out</button>} */}
                 
                 {isFormVisible ? (
                     <form onSubmit={handleFormSubmit}>
@@ -204,28 +202,69 @@ export default function Login() {
                     </form>
                 ) : (
                     <>
-                        <div className="banner">
-                            <div className="bannerLeft">
-                                <img src={sun} alt="" />
-                                <img src={user.picture} alt="" />
+                        <div className="banner p-3 position-relative">
+                            {isSignedIn && (
+                                <button
+                                onClick={handleSignOut}
+                                className="btn btn-outline-dark position-absolute top-0 end-0 m-3"
+                                style={{ zIndex: 10 }}
+                                >
+                                Sign Out
+                                </button>
+                            )}
+                            <div className="container">
+                            <div className="row align-items-center">
+                            {/* Left side (logo + profile image) */}
+                            <div className="col-md-4 col-12 position-relative text-center mb-3 mb-md-0">
+                                <img
+                                src={sun}
+                                alt="logo"
+                                className="img-fluid"
+                                style={{ width: "160px", maxWidth: "100%" }}
+                                />
+                                {/* Profile picture */}
+                                <img
+                                src={user.picture}
+                                alt="profile"
+                                className="rounded-circle border border-white position-absolute"
+                                style={{
+                                    width: "75px",
+                                    height: "75px",
+                                    objectFit: "cover",
+                                    top: "50%",
+                                    left: "50%",
+                                    transform: "translate(-50%, -50%)",
+                                    zIndex: 1,
+                                }}
+                                />
                             </div>
-                            <div className="bannerRight">
-                                <h3>{user.name}</h3>
-                                <h3>Major: {user.major ? user.major : "Not Provided"}</h3>
+
+                            {/* Right side (name + major) */}
+                            <div className="col-md-8 col-12 text-md-start text-center">
+                                <h4 className="mb-4">{user.name}</h4>
+                                <h5 className="text-muted">Major: {user.major ? user.major : "Not Provided"}</h5>
+                                <h5 className="text-muted">
+                                Expected Graduation: {user.gradDate
+                                    ? new Date(`${user.gradDate}-01T00:00:00Z`).toLocaleDateString("en-US", {
+                                        year: "numeric",
+                                        month: "long",
+                                        timeZone: "UTC"  // <--- Force UTC to avoid month shifting
+                                    }) : "Not Provided"} </h5>
+                                </div>
                             </div>
                         </div>
+                        </div>
+
                         <div className="resources">
                             <div className="resourceTitle"><h2>SOLECITO RESOURCES</h2></div>
                             <div className="resourceButtons">
                                 <button className="resourceButton" type="button" onClick={() => navigate("/alumnet")}>Alumni Network</button>
-                                <button className="resourceButton" type="button" onClick={() => navigate("/photoalbum")}>Photo Album</button>
+                                <button className="resourceButton" type="button" onClick={() => window.open("https://photos.google.com/share/AF1QipNgBJUn6SYd-xPVUKh6jJUIMQ1YhkTALIawn4lVaBQgnMR0CaO0eG_M_uSrHblKLg?key=ejNRTnBscUswRHhoY2ZHWnd6cElrMUYybVhfc3B3")}>Photo Album</button>
                                 <button className="resourceButton" type="button" onClick={() => window.open("", "_blank")}>Textbook Bank</button>
                                 <button className="resourceButton" type="button" onClick={() => window.open("", "_blank")}>Test Bank Google Drive</button>
                                 <button className="resourceButton" type="button" onClick={() => window.open("", "_blank")}>MentorSHPE Slack Channel</button>
                             </div>
-                       
                         </div>
-
                     </>
                 )}
             </div>

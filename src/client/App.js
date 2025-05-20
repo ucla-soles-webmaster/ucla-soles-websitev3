@@ -11,6 +11,7 @@ import Footer from './Footer.js';
 import AlumNetwork from './pages/AlumNetwork.js';
 import Initiatives from './pages/Initiatives.js';
 import EBoard from './pages/EBoard.js';
+import Sponsors from './pages/Sponsors.js';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/login" element={<Login />}/>
           <Route path="/alumnet" element={<AlumNetwork/>}/>
           <Route path="/techpage" element={<TechnicalProjects />}/>
+          <Route path="/sponsors" element={<Sponsors />} />
           <Route path="/initiatives" element={<Initiatives />} />
           <Route path="/eboard" element={<EBoard />}/>
         </Routes>

@@ -43,14 +43,14 @@ export default function AwardsSection() {
   ];
 
   return (
-    <div className="">
+    <div className="App">
       {/* <div "statements" */}
       <h2 className="mission fw-bold">Mission Statement</h2>
       <p>SOLES changes lives by empowering the Hispanic community to realize its fullest potential and to impact the world through STEM awareness, access, support, and development. Learn more about SHPE's mission.</p>
       <h2 className="vision fw-bold">Vision</h2>
       <p>SOLE's vision is a world where Hispanics are highly valued and influential as the leading innovators, scientists, mathematicians and engineers.</p>
       <div className="history mb-5">
-      <h2 className="text-center fw-bold mb-5">HISTORY</h2>
+      <h2 className="blueheader text-center">HISTORY</h2>
       <div className="d-flex flex-wrap justify-content-between timeline-container mx-auto">
         {timelineData.map((event, index) => (
           <div key={index} className="timeline-card px-2">

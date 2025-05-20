@@ -6,6 +6,10 @@
   margin-bottom: 20px;
 }
 
+.calendar{
+  background-color: rgb(240, 240, 240);
+}
+
 .container {
   padding: 0 !important;
   margin: 0 !important;
@@ -69,10 +73,10 @@
   font-size: 1.8rem;
 }
 
-.PresidentMessage {
+/* .PresidentMessage {
   font-size: 1.1rem;
   line-height: 1.6;
-}
+} */
 
 /* Making images responsive */
 .img-fluid {

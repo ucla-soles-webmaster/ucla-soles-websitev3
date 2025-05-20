@@ -46,6 +46,9 @@ const NavBar = () => {
                 <Link className="nav-link" to="/eboard" onClick={() => setHamburgerOpen(false)}>EBoard</Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link" to="/sponsors" onClick={() => setHamburgerOpen(false)}>Sponsors</Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link" to="/alumnet" onClick={() => setHamburgerOpen(false)}>Alumni Network</Link>
               </li>
               <li className="nav-item">

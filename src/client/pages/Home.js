@@ -1,5 +1,5 @@
 import solesPrez from "../photos/solespresident.png";
-import prezSig from "../photos/solespresidentsig.png";
+import prezSig from "../photos/solespresidentsig-transparent.png";
 import temp from "../photos/tempimg.png";
 import React from "react";
 import Calendar from "./Calendar.js";
@@ -31,7 +31,7 @@ export default function Home() {
                 </div>
             </div>
             {/*Google Calendar */}
-            <div className="calendar bg-light p-4 rounded my-5">
+            <div className="calendar p-4 rounded my-5">
                 <h2 className="calendarTitle text-center mb-4">SOLES Calendar</h2>
                 <Calendar />
             </div>
@@ -44,7 +44,7 @@ export default function Home() {
                     <img
                         src={solesPrez}
                         alt="Soles President"
-                        className="img-fluid rounded shadow me-4 mb-3 float-md-start"
+                        className="img-fluid shadow me-4 mb-3 float-md-start"
                         style={{ width: "250px", maxWidth: "40%" }}
                     />
                     <p className="PresidentMessage text-start">
@@ -54,10 +54,10 @@ export default function Home() {
                         qualities and experiences Latinx individuals contribute in engineering, empowering our members to have confidence in
                         their abilities, regardless of individual circumstances. We hold four chapter pillars: academic development, professional
                         development, community outreach, and recruitment/retention, which we align with our goals and mission in all of our endeavors.
-                        Please use this site as a resource to explore how we reach our goals and how our members benefit from our interdisciplinary
+                        <br /><br />Please use this site as a resource to explore how we reach our goals and how our members benefit from our interdisciplinary
                         academic resources, community building events, community outreach initiatives, and wide-spread industry partnerships! With these
                         tools and the connections they bring, we hope to pave the way for a future in which all Latinx/Hispanic students are empowered, both
-                        at UCLA and in the greater Los Angeles community, to pursue a STEM degree and achieve high standards. On starting my presidency, I
+                        at UCLA and in the greater Los Angeles community, to pursue a STEM degree and achieve high standards. <br /><br />On starting my presidency, I
                         aim to fortify the relationships within our familia to increase our impact on our communities. Ever since that first summer beach bonfire,
                         I've witnessed the incredible amount of good SOLES produces for its members and its community, despite various obstacles. If I'm being honest,
                         if it weren't for the connections I've made in SOLES, I'm unsure if I would be as successful as I am now. I'm a first-generation Mexican college

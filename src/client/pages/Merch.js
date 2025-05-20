@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
+import "./Merch.css"
 
 export default function Merch() {
     const [merch, setMerch] = useState([]);
@@ -16,7 +17,7 @@ export default function Merch() {
               console.error('Error fetching data: ', error);
               setLoading(false);
           });
-    }, [merch]);
+    }, []);
 
     return (
       <div>
@@ -24,10 +25,21 @@ export default function Merch() {
               <div>Loading merch items...</div>
           ) : (
               merch.length > 0 ? (
-                  <ul>
-                      {merch.map(merch_item => (
-                          <li key={merch_item._id}>{merch_item.Name}</li>
-                      ))}
+                <ul style={{ listStyle: 'none', padding: 0 }}>
+                    {merch.map(merch_item => (
+                        <li key={merch_item._id} style={{ marginBottom: '20px' }}>
+                            <h3>{merch_item.Name}</h3>
+                            <p>Cost: ${merch_item.Cost}</p>
+                            {merch_item.Image_URL && (
+                                <img 
+    src="https://drive.google.com/uc?export=view&id=1LdkuEN1M5_1aGuL0nTWph5IkSvG4LEST"
+    alt="Test Image"
+    style={{ width: '200px', height: 'auto' }}
+/>
+
+                            )}
+                        </li>
+                    ))}
                   </ul>
               ) : (
                   <div>No merch items found.</div>

@@ -1,8 +1,24 @@
 import './AlumNetwork.css';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import axios from 'axios'; 
 
 
 export default function AlumNetwork() {
+    const url = "mongodb+srv://<ucla-soles>:<ucla-soles>@uclawebmaster.icdi46x.mongodb.net/"; 
+    const FirstRequest = () => {
+        const fetchData = async () => {
+            try{
+                const response = await axios(url); 
+                console.log(response); 
+            } catch(error){
+                console.log(error.response); 
+            }
+        }
+        useEffect(() => {
+        fetchData();
+    }, []); 
+    }; 
+
     return (<>
         <h1 className="h1">Alumni Network</h1>
         

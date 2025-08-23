@@ -1,11 +1,27 @@
 import './AlumNetwork.css';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaArrowLeft } from 'react-icons/fa';
+import axios from 'axios'; 
 
 
 export default function AlumNetwork() {
     const navigate = useNavigate();
+    const url = "mongodb+srv://<ucla-soles>:<ucla-soles>@uclawebmaster.icdi46x.mongodb.net/"; 
+    const FirstRequest = () => {
+        const fetchData = async () => {
+            try{
+                const response = await axios(url); 
+                console.log(response); 
+            } catch(error){
+                console.log(error.response); 
+            }
+        }
+        useEffect(() => {
+        fetchData();
+    }, []); 
+    }; 
+
     return (
     <div className="container mt-5 pt-4 position-relative">
         <button

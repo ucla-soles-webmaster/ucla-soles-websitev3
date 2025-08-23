@@ -155,12 +155,12 @@ class EBoard extends Component {
 
         const listMembers = boardMembers.map((d) => 
             <div className = "eBoardPerson">
-            <div class="flip-card">
-            <div class="flip-card-inner">
-                <div class="flip-card-front">
+            <div className="flip-card">
+            <div className="flip-card-inner">
+                <div className="flip-card-front">
                     <img className = "BoardPageImages" src= {d.image} alt={d.name} ></img>
                 </div>
-                <div class="flip-card-back">
+                <div className="flip-card-back">
                     {/* Name */} <div className = "backSideText">{d.name}</div>
                     {/* Year | Major */} <div className = "majorFontLong">{d.major}</div>
                     <div className = "backSideTextSmall">{d.memory}</div>

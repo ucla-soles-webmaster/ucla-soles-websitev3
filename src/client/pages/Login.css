@@ -2,6 +2,7 @@
     background-color: #FFF7AB;
     display: flex;
     flex-direction: row;
+    margin-top: 18px;
 }
 
 .bannerLeft{
@@ -47,8 +48,4 @@
 
 .resourceButton:hover {
     background-color: #D9D9D9;
-}
-
-.App{
-    margin-top: 18px;
 }

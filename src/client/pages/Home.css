@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');*/
 
 .calendarTitle{
   color: rgb(30, 96, 124);
@@ -10,12 +10,12 @@
   background-color: rgb(240, 240, 240);
 }
 
-.container {
+.home-container {
   padding: 0 !important;
   margin: 0 !important;
   max-width: 100% !important;
 }
-/* Full-width cover image with Bootstrap utility classes */
+
 .coverImage {
   position: relative;
   width: 100%;
@@ -45,7 +45,6 @@
 .coverText{
   font-size: 4rem;
   font-weight: bolder;
-  font-family: 'Inter';
   z-index: 1;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
@@ -60,10 +59,6 @@
   text-align: center;
   font-weight: bold;
   margin-bottom: 20px;
-}
-
-.WhoWeAreParagraph{
-  font-family: 'Inter';
 }
 
 /* Message from the President section */
@@ -84,6 +79,82 @@
   height: auto;
 }
 
+.award-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8%;
+}
+
+.border-frame {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.award-photo-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.award-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px; /* Optional: adds slight rounding to photo corners */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .award-image-container {
+    margin-bottom: 2rem;
+  }
+  
+  .border-frame {
+    max-width: 300px;
+  }
+  
+  .award-photo-overlay {
+    width: 70%;
+    height: 70%;
+  }
+
+  .timeline-container {
+    max-width: 100%;      
+    margin: 0 auto;       
+    justify-content: space-around; 
+    gap: 0.3rem;
+  }
+
+  .timeline-card {
+    flex: 0 0 auto !important;
+    min-width: 50px !important;
+    max-width: 60px !important;
+    text-align: center;
+    /* flex: 0 0 auto;
+    min-width: 80px;
+    max-width: 100px;
+    margin-bottom: 1rem; */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+  }
+}
+
+@media (max-width: 575.98px) {
+  .award-image-container{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+}
 
 /* .coverImage {
   position: relative;

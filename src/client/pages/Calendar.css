@@ -1,5 +1,5 @@
-@charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+/* @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=OpenSans:400,700);
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
 
@@ -26,7 +26,7 @@ li {
   padding: 0;
 }
 
-b { /*used for event dates/times*/
+b {
   margin-right: 3px;
 }
 
@@ -73,19 +73,13 @@ b { /*used for event dates/times*/
   flex: 0.3;
   line-height: 1.3;
   margin-top: 20px;
-  /*
-  margin-left: 18%;
-  width: 32%;*/
   justify-content: space-between;
-  /*align-items: flex-start;*/
 }
 
 .cal-event-bar{
   border-color: rgb(0, 29, 58);
   border-style: solid;
   border-radius: 15px;
-  /*border-bottom-left-radius: 0px;
-  border-bottom-right-radius: 0px;*/
   border-width: medium;
   color: white;
   background-color: rgb(0, 29, 58);
@@ -100,7 +94,7 @@ b { /*used for event dates/times*/
   flex: 1;
 }
 
-.fc { /* the calendar root */
+.fc {
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -111,6 +105,10 @@ b { /*used for event dates/times*/
 
 .otherInfo{
   font-size: 0.9vw;
+}
+
+.fc-daygrid{
+  background-color: white;
 }
 
 
@@ -124,7 +122,6 @@ b { /*used for event dates/times*/
     margin-top: -50px;
     margin-left: 8%;    
     width: max-content;
-    /*padding: 0px 20px 0 40px;*/
   }
 
   .titleEventClicked{
@@ -168,4 +165,51 @@ b { /*used for event dates/times*/
   .otherInfo{
     font-size: 2.4vw;
   }
+} */
+
+.calendar-root .demo-app { 
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  min-height: 100%;
+  font-size: 14px;
+  margin: 0 7.5%;
+}
+
+.calendar-root .bottom-calendar-main { padding: 3em; align-items: center; justify-content: center; z-index: 2; flex: 1; }
+.calendar-root .fc { max-width: 1100px; margin: 0 auto; }
+.calendar-root .titleEventClicked { font-size: 1.2vw; }
+.calendar-root .otherInfo { font-size: 0.9vw; }
+/* .fc-view-harness-active .fc-daygrid .fc-view .fc-view-harness .fc-view-harness-active{ background-color: white; } */
+.fc .fc-view-harness {
+  background-color: white !important;
+}
+.fc-theme-standard td, 
+.fc-theme-standard th {
+  border: 1px solid rgb(212, 212, 212) !important;  /* dark blue */
+}
+
+.calendar-root .fc .fc-button-primary {
+  color: var(--fc-button-text-color, black);
+  background-color: var(--fc-button-bg-color, rgb(254 254 84 / 89%));
+  border-color: var(--fc-button-border-color, white);
+  border-width: medium;
+  border-radius: 15px;
+}
+
+.calendar-root .fc .fc-toolbar-title {
+  font-size: 1.75em;
+  margin: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .calendar-root .demo-app { flex-direction: column; }
+  .calendar-root .bottom-calendar-main { margin-left: 4%; margin-right: 4%; }
+  .calendar-root .titleEventClicked { font-size: 1.8vw; }
+  .calendar-root .otherInfo { font-size: 1.4vw; }
+}
+@media screen and (max-width: 800px) {
+  .calendar-root .bottom-calendar-main { margin-left: -2%; margin-right: -2%; }
+  .calendar-root .titleEventClicked { font-size: 2.6vw; }
+  .calendar-root .otherInfo { font-size: 2.4vw; }
 }

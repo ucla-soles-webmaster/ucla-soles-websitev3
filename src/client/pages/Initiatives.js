@@ -8,8 +8,8 @@ export default function Initiatives() {
             <div className="container my-5">
                 <h1 className= "Initiatives text-center">Initaitives</h1>
             </div>
-            <div class="container">
-                <p class="h2">What We Pride In</p>
+            <div className="container">
+                <p className="h2">What We Pride In</p>
             </div>
         </div>
     )

@@ -1,9 +1,21 @@
 import './AlumNetwork.css';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { FaArrowLeft } from 'react-icons/fa';
 
 
 export default function AlumNetwork() {
-    return (<>
+    const navigate = useNavigate();
+    return (
+    <div className="container mt-5 pt-4 position-relative">
+        <button
+            onClick={() => navigate("/login")}
+            className="btn btn-primary shadow-sm d-flex align-items-center gap-2 position-absolute"
+            style={{ top: 0, left: 20 }}
+        >
+            <FaArrowLeft size={18} />
+            <span className="d-none d-sm-inline">Return to Account Page</span>
+        </button>
         <h1 className="h1">Alumni Network</h1>
         
         <p className="intro">
@@ -63,7 +75,7 @@ export default function AlumNetwork() {
         </div>
 
 
-    </>
+    </div>
 
 
     );

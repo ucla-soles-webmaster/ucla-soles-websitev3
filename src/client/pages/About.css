@@ -1,15 +1,41 @@
 /* @import '../../../node_modules/react-beautiful-horizontal-timeline/card.css'; */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');*/
 
 .timeline-container {
-  border-top: 2px solid red;
   position: relative;
   gap: 1rem;
   overflow-x: auto;
   width: 80%;
   margin: 0 auto;
-  padding-top: 80px;
-  z-index: 1;
+  margin-top: -25px;
+  z-index: 10;
+}
+.statements{
+  display: flex;
+  margin: 40px 0px 40px 0px;
+}
+
+.mission {
+  color: rgb(30, 96, 124);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.vision {
+  color: rgb(30, 96, 124);
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+
+
+.history {
+  color: rgb(30, 96, 124);
+  text-align: center;
+  font-weight: bold;
+
 }
 
 .timeline-card {
@@ -25,7 +51,6 @@
   background-color: #ffd600;
   border-radius: 50%;
   position: absolute;
-  top: -26px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
@@ -36,7 +61,7 @@
 
 .timeline-year {
   font-weight: 600;
-  margin-top: 40px;
+  margin-top: 60px;
 }
 
 .bg-yellow {
@@ -44,7 +69,6 @@
 }
 
 h1{
-  font-family: 'Inter';
   font-size: 1vw;
   text-align: center;
   font-weight: normal;
@@ -54,8 +78,9 @@ h1{
   min-height: 100vh;
 }
 
-.history{
+.history-container{
   background-color: rgb(240, 240, 240);
+  padding: 50px;
 }
 
 .timeline {
@@ -128,44 +153,7 @@ h1{
   z-index: -1;
 }
 
-/* 
-.awards-text{
-  flex: 0.7;
-}
-
-.awards-container{
-  display: flex;
-  flex-direction: row;  
-  background-color: #FFF7AB;
-  height: 40vh;
-  position: relative;
-}
-
-.awards-sub-text{
-  background-color: white;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  font-weight: bold;
-}
-
-.awards{
-  margin-bottom: 150px;
-}
-
-
-.awards-picture{
-  flex: 0.3;
-}
-
-.awards-picture img{
-  padding-left: 25px;
-  padding-right: 25px;
-}
-   */
-  @media (min-width: 768px) { /* Adjust this breakpoint as needed */
+@media (min-width: 768px) { /* Adjust this breakpoint as needed */
     .timeline {
       flex-direction: row;
     }
@@ -185,3 +173,118 @@ h1{
     }
 }
   
+/* Soft light yellow card background */
+.bg-soft-yellow {
+  background-color: rgb(255, 247, 171) !important;
+}
+
+/* Optional: tweak titles to match your palette */
+.about-title {
+  color: rgb(30, 96, 124) !important;
+}
+
+/* Remove old fixed layout if you had it */
+.statements { margin: 0; } /* container handles spacing now */
+
+/* Make sure nothing overlaps: Bootstrap grid already stacks, but add this just in case */
+section .row { margin: 0; }
+
+
+.award-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-frame {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.award-photo-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.award-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px; /* Optional: adds slight rounding to photo corners */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .award-image-container {
+    margin-bottom: 2rem;
+  }
+  
+  .border-frame {
+    max-width: 300px;
+  }
+  
+  /* .award-photo-overlay {
+    width: 70%;
+    height: 70%;
+  } */
+}
+
+@media (max-width: 575.98px) {
+  .border-frame {
+    max-width: 250px;
+  }
+  
+  /* .award-photo-overlay {
+    width: 65%;
+    height: 65%;
+  } */
+}
+
+
+/* tighten spacing on very small screens */
+/* @media (max-width: 576px){
+  .frame-wrap{ width: clamp(200px, 60vw, 320px); }
+  .frame-photo{ --pad: 6%; border-radius: 18px; }
+} */
+
+
+
+/* .frame-wrap{
+  position: relative;
+  width: min(340px, 32vw); 
+  max-width: 100%;
+  aspect-ratio: 4 / 5;     
+  margin: 0 auto;
+}
+
+.frame-photo{
+  --pad: 7%;          
+  position: absolute;
+  inset: var(--pad);
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;      
+  display: block;
+  z-index: 1;
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+
+.frame-border{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  z-index: 0;
+  pointer-events: none;
+} */

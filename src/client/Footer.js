@@ -1,7 +1,7 @@
 import React from "react";
 import Insta from "./photos/instareal.png";
 import Link from "./photos/link.png";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import './Footer.css';
 
 const Footer = () => (

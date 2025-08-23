@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');*/
 
 .navbar {
     background-color: #001d3a !important;
@@ -13,7 +13,7 @@
 
 .navbar-nav .nav-link {
     font-size: 1.2rem;
-    font-family: 'Inter';
+    font-family: 'Poppins';
     transition: font-size 0.3s ease-in-out;
     border-radius: 40px;
 }

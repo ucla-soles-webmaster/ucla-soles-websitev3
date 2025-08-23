@@ -1,7 +1,7 @@
 .eBoardPage {
     width: 80%;
     margin: 30px auto;
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     display: flex;
     flex-wrap: wrap;
   }
@@ -9,7 +9,7 @@
   .sponsorPage {
     width: 80%;
     margin: 30px auto;
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     flex-wrap: wrap;
     text-align: center;
   }
@@ -79,7 +79,7 @@
   }
   
   .setFontSizeName {
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     font-size: 1.8vw;
     text-align: match-parent;
     line-height: 1.4vw;
@@ -89,7 +89,7 @@
   }
   
   .setFontSizePosition{
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     font-size: 1.2vw;
     line-height: 1vw;
     text-align: match-parent;
@@ -98,7 +98,7 @@
   }
   
   .setFontSizeLevel{
-  font-family: 'Poppins', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
   font-size: 1.2vw;
   line-height: 2vw;
   text-align: match-parent;
@@ -107,7 +107,7 @@
   }
   
   .setFontSizeStaffEmail{
-  font-family: 'Poppins', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
   font-size: 1.2vw;
   line-height: 1vw;
   text-align: match-parent;
@@ -209,7 +209,7 @@
   
   
   .backSideText{
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     font-size: 1.8vw;
     line-height: 2vw;
     color: white;
@@ -217,7 +217,7 @@
   }
   
   .backSideTextSmall{
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     font-size: 1.1vw;
     line-height: 1.2vw;
     color: white;
@@ -225,7 +225,7 @@
   }
   
   .majorFont{
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     font-size: 1.3vw;
     line-height: 1.2vw;
     margin: .4vw;
@@ -233,7 +233,7 @@
   }
   
   .sponsorLevels{
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     font-size: 3vw;
     line-height: 3.5vw;
     margin: .4vw;  
@@ -244,7 +244,7 @@
   }
   
   .sponsorLevelsNoColor{
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     font-size: 3vw;
     line-height: 3.5vw;
     margin: .4vw;  
@@ -255,7 +255,7 @@
   }
   
   .majorFontLong{
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     font-size: 1.16vw;
     line-height: 1.2vw;
     margin: .4vw;
@@ -263,7 +263,7 @@
   }
   
   .emailFont{
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     font-size: 1vw;
     line-height: 1.2vw;
     position: absolute;
@@ -275,7 +275,7 @@
   }
   
   .emailFontShort{
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     font-size: 1vw;
     line-height: 1.2vw;
     position: absolute;
@@ -286,7 +286,7 @@
   }
   
   .emailFontLong{
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     font-size: 1vw;
     line-height: 1.2vw;
     position: absolute;
@@ -306,7 +306,7 @@
   }
   
   .titleFont1{
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     font-size: 1.5vw;
     line-height: 1.8vw;
     text-align: center;
@@ -316,7 +316,7 @@
   }
   
   .introFont{
-  font-family: 'Poppins', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
   font-size: 1.5vw;
   line-height: 1.8vw;
   position: absolute;
@@ -324,7 +324,7 @@
   }
   
   .titleFont2{
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     font-size: 1.2vw;
     line-height: 1.8vw;
     text-align: center;
@@ -336,7 +336,7 @@
   }
   
   .titleFont3{
-  font-family: 'Poppins', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
   font-size: 1.4vw;
   line-height: 1.9vw;
   text-align: center;
@@ -347,7 +347,7 @@
   }
   
   .titleFont3Sponsor{
-  font-family: 'Poppins', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
   font-size: 1.2vw;
   line-height: 1.9vw;
   text-align: center;
@@ -358,7 +358,7 @@
   }
   
   .titleFont4{
-  font-family: 'Poppins', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
   font-size: 1.4vw;
   line-height: 1.7vw;
   text-align: left;
@@ -368,7 +368,7 @@
   }
   
   .titleFont5{
-  font-family: 'Poppins', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
   font-size: 2.5vw;
   line-height: 2.5vw;
   text-align: center;
@@ -384,7 +384,7 @@
   }
   
   .staffMembersBoard2{
-  font-family: 'Poppins', sans-serif;
+  /*font-family: 'Poppins', sans-serif;*/
   font-size: 3vw;
   line-height: 1.8vw;
   color: #001d3a;
@@ -396,7 +396,7 @@
   .staffMembersBoard{
     margin-top: 0.1vh;
     text-align: center;
-    font-family: 'Poppins', sans-serif;
+    /*font-family: 'Poppins', sans-serif;*/
     font-size: 3vw;
     /*margin-bottom: 3.1vw;*/
     color: #001d3a;

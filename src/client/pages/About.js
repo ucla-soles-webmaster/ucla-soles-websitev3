@@ -4,7 +4,6 @@ import { HiArrowNarrowRight, HiCalendar } from "react-icons/hi";
 import './About.css';
 import 'react-vertical-timeline-component/style.min.css';
 import kellyAwardPic from "../photos/kelly-award-pic.png";
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import SOLES from '../icons/soles.png';
 import SHPE from '../icons/shpe.png';
 import CEED from '../icons/ceed.png';
@@ -47,7 +46,6 @@ export default function AwardsSection() {
 
   return (
     <div className="App">
-      {/* <div "statements" */}
       <CoverSection title="About Us" imageUrl={aboutCoverImg} />
       
       {/* Mission & Vision */}
@@ -164,61 +162,6 @@ export default function AwardsSection() {
           </div>
         </div>
       </section>
-
-
-      {/* <div className="awards position-relative w-100 mb-5">
-        <div className="bg-yellow w-100 py-4">
-          <div className="container">
-            <div className="row">
-              <div className="offset-lg-5 col-lg-7 col-12 pe-lg-5 px-3 text-start">
-                <h5 className="fw-bold text-uppercase">Awards</h5>
-
-                <p className="mb-1 fw-bold">Blue Chip Chapter Award</p>
-                <p className="mb-2">2022 • 2021 • 2020 • 2017 • 2016 • 2015</p>
-                <p className="mb-3">
-                  Awarded during the annual SHPE Regional Leadership Development Conference to chapters
-                  shown to provide outstanding metrics throughout the year, exhibiting growth and success.
-                </p>
-
-                <p className="mb-1 fw-bold">2020 Runner Up for Bruin Development Award</p>
-                <p className="mb-3">
-                  Recognized by UCLA's Engineering Society for our commitment to developing our members.
-                </p>
-
-                <p className="mb-1 fw-bold">Best Medium Engineering Student Organization at UCLA 2017</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="position-absolute start-0 top-50 translate-middle-y d-none d-lg-block" style={{ marginLeft: '18%' }}>
-          <img
-            src={kellyAwardPic}
-            alt="Kelly Award"
-            className="shadow"
-            style={{
-              height: '340px',
-              objectFit: 'cover',
-              zIndex: 2
-            }}
-          />
-        </div>
-      </div> */}
     </div>
   );
 }
-
-
-      // <div className="statements text-center">
-      //   <div className="row">
-      //     <div className="col">
-      //       <h2 className="mission fw-bold">Mission Statement</h2>
-      //       <p>SOLES changes lives by empowering the Hispanic community to realize its fullest potential and to impact the world through STEM awareness, access, support, and development. Learn more about SHPE's mission.</p>
-      //     </div>
-      //     <div className="col">
-      //       <h2 className="vision fw-bold">Vision</h2>
-      //       <p>SOLE's vision is a world where Hispanics are highly valued and influential as the leading innovators, scientists, mathematicians and engineers.</p>
-      //     </div>
-          
-      // </div>
-      // </div>

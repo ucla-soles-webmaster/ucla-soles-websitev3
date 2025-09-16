@@ -30,14 +30,10 @@ export default function Merch() {
                         <li key={merch_item._id} style={{ marginBottom: '20px' }}>
                             <h3>{merch_item.Name}</h3>
                             <p>Cost: ${merch_item.Cost}</p>
-                            {merch_item.Image_URL && (
-                                <img 
-    src="https://drive.google.com/uc?export=view&id=1LdkuEN1M5_1aGuL0nTWph5IkSvG4LEST"
-    alt="Test Image"
-    style={{ width: '200px', height: 'auto' }}
-/>
-
-                            )}
+                            <img src={merch_item.Image_Url}
+                                alt="merch image"
+                                style={{ width: '200px', height: 'auto' }} 
+                            />
                         </li>
                     ))}
                   </ul>

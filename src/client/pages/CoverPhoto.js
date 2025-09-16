@@ -9,7 +9,7 @@ export default function CoverSection({ title, imageUrl }) {
         backgroundImage: `url(${imageUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        height: "70vh", // adjust for desired height
+        height: "70vh",
         position: "relative",
       }}
     >

@@ -114,17 +114,10 @@ h1{
 
 .awards{
   margin-top: 8vh;
-  /* background-color: red; */
-  /* margin-top: 5vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  justify-content: space-between; */
 }
 
 .awards-pic{
   flex: 0.5;
-  /* background-color: green; */
   margin-left: 2vw;
   margin-right: 2vw;
   background-color: transparent;
@@ -153,15 +146,15 @@ h1{
   z-index: -1;
 }
 
-@media (min-width: 768px) { /* Adjust this breakpoint as needed */
+@media (min-width: 768px) { 
     .timeline {
       flex-direction: row;
     }
   
     .timeline-event {
       flex-direction: row;
-      align-items: center; /* Align items center in horizontal mode */
-      margin: 0 40px; /* Space out events horizontally */
+      align-items: center;
+      margin: 0 40px;
     }
   
     .event-year {
@@ -169,24 +162,22 @@ h1{
     }
   
     .event-content {
-      max-width: 200px; /* Prevents content from stretching too wide */
+      max-width: 200px;
     }
 }
   
-/* Soft light yellow card background */
 .bg-soft-yellow {
   background-color: rgb(255, 247, 171) !important;
 }
 
-/* Optional: tweak titles to match your palette */
 .about-title {
   color: rgb(30, 96, 124) !important;
 }
 
-/* Remove old fixed layout if you had it */
-.statements { margin: 0; } /* container handles spacing now */
+.statements { 
+  margin: 0; 
+}
 
-/* Make sure nothing overlaps: Bootstrap grid already stacks, but add this just in case */
 section .row { margin: 0; }
 
 
@@ -218,7 +209,7 @@ section .row { margin: 0; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 15px; /* Optional: adds slight rounding to photo corners */
+  border-radius: 15px;
 }
 
 /* Responsive adjustments */
@@ -230,61 +221,10 @@ section .row { margin: 0; }
   .border-frame {
     max-width: 300px;
   }
-  
-  /* .award-photo-overlay {
-    width: 70%;
-    height: 70%;
-  } */
 }
 
 @media (max-width: 575.98px) {
   .border-frame {
     max-width: 250px;
   }
-  
-  /* .award-photo-overlay {
-    width: 65%;
-    height: 65%;
-  } */
 }
-
-
-/* tighten spacing on very small screens */
-/* @media (max-width: 576px){
-  .frame-wrap{ width: clamp(200px, 60vw, 320px); }
-  .frame-photo{ --pad: 6%; border-radius: 18px; }
-} */
-
-
-
-/* .frame-wrap{
-  position: relative;
-  width: min(340px, 32vw); 
-  max-width: 100%;
-  aspect-ratio: 4 / 5;     
-  margin: 0 auto;
-}
-
-.frame-photo{
-  --pad: 7%;          
-  position: absolute;
-  inset: var(--pad);
-  width: auto;
-  height: auto;
-  object-fit: cover;
-  border-radius: 20px;      
-  display: block;
-  z-index: 1;
-  box-shadow: 0 10px 24px rgba(0,0,0,.12);
-}
-
-.frame-border{
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  z-index: 0;
-  pointer-events: none;
-} */
